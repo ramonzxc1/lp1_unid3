@@ -472,7 +472,21 @@ void Empresa::calculaTodoOsSalarios(){
     relatorio << "Soma de salarios: " << soma << endl;
     relatorio << "**************************** " << endl;
 
-    cout  << "Soma dos salarios calculados: "<< soma << endl;
+    cout  << "Soma dos salarios calculados: "<< soma << endl; // CUSTO TOTAL: R$ 14,802.18
+
+    /* 
+    
+    FATURAMENTO MENSAL: 20,957.15
+
+    Custo ASG(%): 20.20%
+    Custo Vendedor(%): 59.37%
+    Custo GErente(%): 20,42%
+
+    LUCRO DA EMPRESA: 6154.97
+
+    SITUAÇÃO: Lucro
+    
+    */
 
 }
 
