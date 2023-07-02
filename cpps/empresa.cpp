@@ -507,3 +507,22 @@ void Empresa::calcularRescisao(string matricula, Data desligamento){
     }
     cout  << "Funcionario não localizado no sistema!" << endl;
 }
+
+  void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
+  {
+    calcularRescisao(matricula, desligamento); // deve chamar essa funcao que calcula a rescisao
+
+    // deve produzir um arquivo chamado relatorioDemissional.txt (seguir o padrao no exemplo dado)
+
+    // arquivo de input dos funcionarios deve ser atualizado (ASG, vendedor e gerente)
+  }
+
+  void Empresa::contratarFuncionario()
+  {
+    // deve ler novoFuncionario.txt
+    
+    // primeira linha eh o tipo de funcionario (ASG, vendedor ou gerente)
+
+    // demais linhas devem seguir o padrao dos arquivos de input desses profissionais
+
+  }
