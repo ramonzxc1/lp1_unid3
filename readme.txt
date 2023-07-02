@@ -1,0 +1,1 @@
+Utilize o Makefile para compilar de forma simplificada
