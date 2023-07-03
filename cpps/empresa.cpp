@@ -553,7 +553,7 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
 
             // removendo o funcionario
             asgs.erase(asgs.begin()+i);
-            
+
             // arquivo de input dos funcionarios deve ser atualizado (ASG, vendedor e gerente)
             arquivo.open("./leitura/asg.txt", ios::out);
             for(int j = 0; j<asgs.size() ;j++){
@@ -561,6 +561,7 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
                 arquivo << "ASG Nº: " << j << endl;
                 arquivo << "##### DADOS PESSOAIS #####" << endl;
                 arquivo << asgs[j].getNome() << endl;
+                arquivo << asgs[j].getCpf() << endl;
                 arquivo << asgs[j].getQtdFilhos() << endl;
                 arquivo << asgs[j].getEstadoCivil() << endl;
                 arquivo << "***** Endereço (cidade, cep, bairro, rua e numero) ****" << endl;
@@ -620,6 +621,7 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
                 arquivo << "VENDEDOR Nº: " << j << endl;
                 arquivo << "##### DADOS PESSOAIS #####" << endl;
                 arquivo << vendedores[j].getNome() << endl;
+                arquivo << vendedores[j].getCpf() << endl;
                 arquivo << vendedores[j].getQtdFilhos() << endl;
                 arquivo << vendedores[j].getEstadoCivil() << endl;
                 arquivo << "***** Endereço (cidade, cep, bairro, rua e numero) ****" << endl;
@@ -680,6 +682,7 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
                 arquivo << "GERENTE Nº: " << j << endl;
                 arquivo << "##### DADOS PESSOAIS #####" << endl;
                 arquivo << gerentes[j].getNome() << endl;
+                arquivo << gerentes[j].getCpf() << endl;
                 arquivo << gerentes[j].getQtdFilhos() << endl;
                 arquivo << gerentes[j].getEstadoCivil() << endl;
                 arquivo << "***** Endereço (cidade, cep, bairro, rua e numero) ****" << endl;
