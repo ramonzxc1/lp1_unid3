@@ -440,7 +440,111 @@ void Empresa::calculaSalarioFuncionario(string matricula){
     cout  << "Funcionario não localizado no sistema!" << endl;
 }
 
-void Empresa::calculaTodoOsSalarios(){
+
+void Empresa::calculaTodoOsSalarios() {
+  fstream relatorio;
+  // Salvar funcionarios     //arquivo relatorio;
+  relatorio.open("./escrita/relatórioFinanceiro.txt", ios::out);
+  float soma_asg = 0, soma_vendedor = 0, soma_gerente = 0;
+  cout << "######### Relatório Financeiro ########\n\n"<<endl;
+  relatorio<<"######### Relatório Financeiro ########\n\n" << endl;
+
+
+  //------------- ASG ---------------------
+  cout << "Cargo: ASG\n";
+  relatorio<<"Cargo: ASG\n";
+  
+  for (int i = 0; i < asgs.size(); i++) {
+    cout <<asgs[i].getMatricula()<< " - " << asgs[i].getNome() << " - " << asgs[i].getSalario() << endl;
+    relatorio <<asgs[i].getMatricula()<< " - " << asgs[i].getNome() << " - " << asgs[i].getSalario() << endl;
+  
+    soma_asg += asgs[i].getSalario();
+  }
+  cout << "Total ASG: " << soma_asg << endl;
+  relatorio << "Total ASG: " << soma_asg << endl;
+
+  //-------------------- VENDEDOR ----------------------
+  cout << "" << endl;
+  relatorio << ""<<endl;
+  cout << "Cargo: Vendedor\n";
+  relatorio << "Cargo: Vendedor\n";
+
+  for (int i = 0; i < vendedores.size(); i++) {
+    cout << vendedores[i].getMatricula() <<" - "<< vendedores[i].getNome()<< " - R$ " << vendedores[i].getSalario() << endl;
+    relatorio << vendedores[i].getMatricula() <<" - "<< vendedores[i].getNome()<< " - R$ " << vendedores[i].getSalario() << endl;
+     soma_vendedor += vendedores[i].getSalario();
+  }
+
+  
+  cout << "Total Vendedor: " << soma_vendedor << "\n\n";
+  relatorio << "Total Vendedor: "<< soma_vendedor <<"\n\n";
+
+  //-------------------------Gerentes------------
+  cout << "Cargo: Gerente\n";
+  relatorio << "Cargo: Gerente\n";
+  // arquivo relatorio
+  
+  for (int i = 0; i < gerentes.size(); i++) {
+    cout <<gerentes[i].getMatricula() <<" - " << gerentes[i].getNome()<< " - R$" << gerentes[i].getSalario() << endl;
+    relatorio << gerentes[i].getMatricula() <<" - " << gerentes[i].getNome() << " - R$" << gerentes[i].getSalario() << endl;
+    
+    soma_gerente += gerentes[i].getSalario();
+  }
+  cout << "Total Gerente: " << soma_gerente << endl;
+  relatorio << "Total Gerente: " << soma_gerente << endl;
+
+  // --------- total empresa ------------
+  cout << ""<<endl;
+  relatorio << ""<<endl;
+  cout << "CUSTO TOTAL: R$" << (soma_asg + soma_gerente + soma_vendedor) << endl;
+  relatorio << "CUSTO TOTAL: R$" << (soma_asg + soma_gerente + soma_vendedor) << endl;
+
+  float faturamento = this->getFaturamentoMensal();
+  //faturamento mensal
+  cout << "" << endl;
+  relatorio << ""<<endl;
+  cout<<"FATURAMENTO MENSAL: "<< faturamento << "\n"<< endl;
+  relatorio<<"FATURAMENTO MENSAL: "<<faturamento<< "\n"<< endl;
+  
+  // calculos
+  float porce_asg, porce_vendedor, porce_gerente, lucro_empresa, custo_total;
+
+  custo_total = (soma_asg + soma_gerente + soma_vendedor);
+
+  porce_asg = (soma_asg*100.0)/custo_total;
+  porce_vendedor = (soma_vendedor*100.0)/custo_total;
+  porce_gerente = (soma_gerente*100.0)/custo_total;
+  
+  lucro_empresa = faturamento - custo_total;
+  // porcentagens custo por categoria
+  cout << "Custo ASG(%): " << porce_asg <<"%"<< endl;
+  cout<<"Custo Vendedor(%): "<<porce_vendedor <<"%"<<endl;
+  cout<<"Custo Gerente(%): " <<porce_gerente<<"%"<<endl;
+   relatorio << "Custo ASG(%): " << porce_asg <<"%"<< endl;
+   relatorio<<"Custo Vendedor(%): "<<porce_vendedor <<"%"<<endl;
+   relatorio<<"Custo Gerente(%): " <<porce_gerente<<"%"<<endl;
+
+  cout << "" << endl;
+  relatorio << ""<<endl;
+  cout << "LUCRO DA EMPRESA: "<<lucro_empresa << endl;
+  relatorio << "LUCRO DA EMPRESA: "<<lucro_empresa<< endl;
+
+  cout << "" << endl;
+  relatorio << ""<<endl;
+  if(lucro_empresa>0){
+    cout<<"SITUAÇÂO: lucro"<< endl;
+    relatorio << "SITUAÇÂO: Lucro"<< endl;
+  }else{
+    cout << "SITUAÇÂO: Prejuízo"<< endl;
+    relatorio << "SITUAÇÂO: Prejuízo"<< endl;
+  } 
+}
+
+
+/*void Empresa::calculaTodoOsSalarios(){
+
+
+
 
     fstream relatorio;
     relatorio.open("./escrita/relatorioFinanceiro.txt", ios::out);
@@ -475,8 +579,8 @@ void Empresa::calculaTodoOsSalarios(){
     relatorio << "**************************** " << endl;
 
     cout  << "Soma dos salarios calculados: "<< soma << endl; // CUSTO TOTAL: R$ 14,802.18
-
-    /* 
+    
+    
     
     FATURAMENTO MENSAL: 20,957.15
 
@@ -488,9 +592,10 @@ void Empresa::calculaTodoOsSalarios(){
 
     SITUAÇÃO: Lucro
     
-    */
+    
 
 }
+*/
 
 void Empresa::calcularRescisao(string matricula, Data desligamento){
     cout << "\n##########    Calculando a rescisão de funcionário    ##########" <<endl;
@@ -529,9 +634,10 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
     // deve chamar essa funcao que calcula a rescisao
     // deve produzir um arquivo chamado relatorioDemissional.txt (seguir o padrao no exemplo dado)
     // arquivo de input dos funcionarios deve ser atualizado (ASG, vendedor e gerente)
-
+    int achou_funcionario = 0;
     for(int i = 0; i<asgs.size() ;i++){
         if(matricula == asgs[i].getMatricula()){
+            achou_funcionario = 1;
             fstream arquivo;
             arquivo.open("./escrita/relatorioDemissional.txt", ios::out);
             arquivo << "##############################\n";
@@ -552,6 +658,27 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
             arquivo << meses << " meses e ";
             arquivo << dias << " dias\n";
             arquivo.close();
+
+            // IMPRIMINDO NO TERMINAL
+            cout << "##############################\n";
+            cout << "    Relatorio Demissional     \n";
+            cout << "##############################\n";
+            cout << "Cargo: ASG" << endl;
+            cout << "Nome: " << asgs[i].getNome() << endl;
+            cout << "CPF: " << asgs[i].getCpf() << endl;
+            cout << "Matrícula: " << asgs[i].getMatricula() << endl;
+            cout << "******************************\n";
+            cout << "Valor da rescisão: R$" << asgs[i].calcularRecisao(desligamento) << endl; 
+            cout << "******************************\n";
+            cout << "Tempo de Trabalho: "; // Tempo de Trabalho: 10 anos, 5 meses e 12 dias
+            anos = (desligamento.ano - 1) - asgs[i].getDataingresso().ano;
+            meses = (desligamento.mes + 11) - asgs[i].getDataingresso().mes;
+            dias = (desligamento.dia + 30) - asgs[i].getDataingresso().dia;
+            cout << anos << ", ";
+            cout << meses << " meses e ";
+            cout << dias << " dias\n";
+            cout << "##############################\n";
+            // FIM IMPRESSAO NO TERMINAL
 
             // removendo o funcionario
             asgs.erase(asgs.begin()+i);
@@ -592,6 +719,7 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
     }
     for(int i = 0; i<vendedores.size() ;i++){
         if(matricula == vendedores[i].getMatricula()){
+            achou_funcionario = 1;
             fstream arquivo;
             arquivo.open("./escrita/relatorioDemissional.txt", ios::out);
             arquivo << "##############################\n";
@@ -612,6 +740,27 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
             arquivo << meses << " meses e ";
             arquivo << dias << " dias\n";
             arquivo.close();
+
+            // IMPRIMINDO NO TERMINAL
+            cout << "##############################\n";
+            cout << "    Relatorio Demissional     \n";
+            cout << "##############################\n";
+            cout << "Cargo: VENDEDOR" << endl;
+            cout << "Nome: " << vendedores[i].getNome() << endl;
+            cout << "CPF: " << vendedores[i].getCpf() << endl;
+            cout << "Matrícula: " << vendedores[i].getMatricula() << endl;
+            cout << "******************************\n";
+            cout << "Valor da rescisão: R$" << vendedores[i].calcularRecisao(desligamento) << endl; 
+            cout << "******************************\n";
+            cout << "Tempo de Trabalho: "; // Tempo de Trabalho: 10 anos, 5 meses e 12 dias
+            anos = (desligamento.ano - 1) - vendedores[i].getDataingresso().ano;
+            meses = (desligamento.mes + 11) - vendedores[i].getDataingresso().mes;
+            dias = (desligamento.dia + 30) - vendedores[i].getDataingresso().dia;
+            cout << anos << ", ";
+            cout << meses << " meses e ";
+            cout << dias << " dias\n";
+            cout << "##############################\n";
+            // FIM IMPRESSAO NO TERMINAL
 
             // removendo o funcionario
             vendedores.erase(vendedores.begin()+i);
@@ -652,6 +801,7 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
     }
     for(int i = 0; i<gerentes.size() ;i++){
         if(matricula == gerentes[i].getMatricula()){
+            achou_funcionario = 1;
             fstream arquivo;
             arquivo.open("./escrita/relatorioDemissional.txt", ios::out);
             arquivo << "##############################\n";
@@ -672,6 +822,27 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
             arquivo << meses << " meses e ";
             arquivo << dias << " dias\n";
             arquivo.close();
+
+            // IMPRIMINDO NO TERMINAL
+            cout << "##############################\n";
+            cout << "    Relatorio Demissional     \n";
+            cout << "##############################\n";
+            cout << "Cargo: GERENTE" << endl;
+            cout << "Nome: " << gerentes[i].getNome() << endl;
+            cout << "CPF: " << gerentes[i].getCpf() << endl;
+            cout << "Matrícula: " << gerentes[i].getMatricula() << endl;
+            cout << "******************************\n";
+            cout << "Valor da rescisão: R$" << gerentes[i].calcularRecisao(desligamento) << endl; 
+            cout << "******************************\n";
+            cout << "Tempo de Trabalho: "; // Tempo de Trabalho: 10 anos, 5 meses e 12 dias
+            anos = (desligamento.ano - 1) - gerentes[i].getDataingresso().ano;
+            meses = (desligamento.mes + 11) - gerentes[i].getDataingresso().mes;
+            dias = (desligamento.dia + 30) - gerentes[i].getDataingresso().dia;
+            cout << anos << ", ";
+            cout << meses << " meses e ";
+            cout << dias << " dias\n";
+            cout << "##############################\n";
+            // FIM IMPRESSAO NO TERMINAL
 
             // removendo o funcionario
             gerentes.erase(gerentes.begin()+i);
@@ -710,7 +881,7 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
             break;
         }
     }
-    cout  << "Funcionario não localizado no sistema!" << endl;
+    if(achou_funcionario == 0) cout  << "Funcionario não localizado no sistema!" << endl;
 }
 
 void Empresa::contratarFuncionario()
@@ -733,6 +904,15 @@ try{
         }
 
         arquivo.close();
+
+        // IMPRIMINDO novoFuncionario NO TERMINAL
+        cout << "----------- novoFuncionario ----------------" << endl;
+        for(auto it : temp)
+        {
+            cout << it << endl;
+        }
+        cout << "--------------------------------------------" << endl;
+        // FIM IMPRESSAO
 
         if(temp[0] == "ASG")
         {

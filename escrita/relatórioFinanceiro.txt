@@ -1,0 +1,32 @@
+######### Relatório Financeiro ########
+
+
+Cargo: ASG
+72.874-9 - Pedro Cunha de Araujo - 1584
+72.635-8 - Jorge Pereira Linhares - 1378
+72.874-1 - Antonio Augusto de Souza Filho - 1320
+Total ASG: 4282
+
+Cargo: Vendedor
+72.487-3 - Andre de Albuquerque de Souza - R$ 2200
+72.222-9 - Suziane Augusta Maria de Souza - R$ 1500
+72.379-2 - Alexandra Gonçalve Dias - R$ 1500
+72.554-1 - Maximus Decimus Meridius - R$ 1500
+72.252-4 - Paulo Herculano de Souza - R$ 1708
+Total Vendedor: 8408
+
+Cargo: Gerente
+72.745-3 - Marcus Aurelius de Souza - R$1500
+Total Gerente: 1500
+
+CUSTO TOTAL: R$14190
+
+FATURAMENTO MENSAL: 156290
+
+Custo ASG(%): 30.1762%
+Custo Vendedor(%): 59.253%
+Custo Gerente(%): 10.5708%
+
+LUCRO DA EMPRESA: 142100
+
+SITUAÇÂO: Lucro
