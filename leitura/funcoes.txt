@@ -17,3 +17,4 @@ demitirFuncionario()
 2023
 6
 22
+contratarFuncionario()

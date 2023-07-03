@@ -105,6 +105,8 @@ void Empresa::carregaFuncoes(){
                 desligamento.dia = stoi(temp[i+4]);
                 i+=4;
                 demitirFuncionario(matricula, desligamento);
+            }else if(temp[i] == "contratarFuncionario()"){
+                contratarFuncionario();
             }
         }
     }catch(exception &erro){
@@ -645,7 +647,6 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
                 arquivo << vendedores[j].getDataingresso().dia << endl;
             }
             arquivo.close();
-
             break;
         }
     }
@@ -715,9 +716,214 @@ void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
 void Empresa::contratarFuncionario()
 {
 // deve ler novoFuncionario.txt
-
 // primeira linha eh o tipo de funcionario (ASG, vendedor ou gerente)
-
 // demais linhas devem seguir o padrao dos arquivos de input desses profissionais
 
+// NAO DEVERIA REESCREVER O DETERMINADO ARQUIVO DE LEITURA DO FUNCIONARIO?
+// farei isso porque nao faz sentido nao fazer...
+
+try{
+        fstream arquivo;
+        arquivo.open("./leitura/novoFuncionario.txt", ios::in);
+        vector<string> temp;
+        string linha;
+
+        while(getline(arquivo, linha)){
+            temp.push_back(linha);
+        }
+
+        arquivo.close();
+
+        if(temp[0] == "ASG")
+        {
+            Asg tAsg;
+
+            tAsg.setNome(temp[2]);
+            tAsg.setCpf(temp[3]);
+            tAsg.setQtdFilhos(stoi(temp[4]));
+            tAsg.setEstadoCivil(temp[5]);
+            Endereco tEnd;
+            tEnd.cidade = temp[7];
+            tEnd.cep = temp[8];
+            tEnd.bairro = temp[9];
+            tEnd.rua = temp[10];
+            tEnd.numero = stoi(temp[11]);
+            tAsg.setEndereco(tEnd);
+            Data tnasc;
+            tnasc.ano = stoi(temp[13]);
+            tnasc.mes = stoi(temp[14]);
+            tnasc.dia = stoi(temp[15]);
+            tAsg.setDataNascimento(tnasc);
+            tAsg.setMatricula(temp[17]);
+            tAsg.setSalario(stof(temp[18]));
+            tAsg.setAdcionalInsabubridade(stof(temp[19]));
+            tAsg.setDiasFaltas(stoi(temp[20]));
+            Data ting;
+            ting.ano = stoi(temp[22]);
+            ting.mes = stoi(temp[23]);
+            ting.dia = stoi(temp[24]);
+            tAsg.setDataingresso(ting);
+            asgs.push_back(tAsg);
+
+            // arquivo de input dos funcionarios deve ser atualizado (ASG, vendedor e gerente)
+            arquivo.open("./leitura/asg.txt", ios::out);
+            for(int j = 0; j<asgs.size() ;j++){
+                arquivo << "#########################################################" << endl;
+                arquivo << "ASG Nº: " << j << endl;
+                arquivo << "##### DADOS PESSOAIS #####" << endl;
+                arquivo << asgs[j].getNome() << endl;
+                arquivo << asgs[j].getCpf() << endl;
+                arquivo << asgs[j].getQtdFilhos() << endl;
+                arquivo << asgs[j].getEstadoCivil() << endl;
+                arquivo << "***** Endereço (cidade, cep, bairro, rua e numero) ****" << endl;
+                arquivo << asgs[j].getEndereco().cidade << endl;
+                arquivo << asgs[j].getEndereco().cep << endl;
+                arquivo << asgs[j].getEndereco().bairro << endl;
+                arquivo << asgs[j].getEndereco().rua << endl;
+                arquivo << asgs[j].getEndereco().numero << endl;
+                arquivo << "***** Data de nascimento (ano, mes, dia) ****" << endl;
+                arquivo << asgs[j].getDataNascimento().ano << endl;
+                arquivo << asgs[j].getDataNascimento().mes << endl;
+                arquivo << asgs[j].getDataNascimento().dia << endl;
+                arquivo << "##### DADOS FUNCIONAIS #####" << endl;
+                arquivo << asgs[j].getMatricula() << endl;
+                arquivo << asgs[j].getSalario() << endl;
+                arquivo << asgs[j].getAdcionalInsabubridade() << endl;
+                arquivo << asgs[j].getDiasFaltas() << endl;
+                arquivo << "***** Data de ingresso (ano, mes, dia) ****" << endl;
+                arquivo << asgs[j].getDataingresso().ano << endl;
+                arquivo << asgs[j].getDataingresso().mes << endl;
+                arquivo << asgs[j].getDataingresso().dia << endl;
+            }
+            arquivo.close();
+        }
+        else if(temp[0] == "VENDEDOR")
+        {
+            Vendedor tVend;
+
+            tVend.setNome(temp[2]);
+            tVend.setCpf(temp[3]);
+            tVend.setQtdFilhos(stoi(temp[4]));
+            tVend.setEstadoCivil(temp[5]);
+            Endereco tEnd;
+            tEnd.cidade = temp[7];
+            tEnd.cep = temp[8];
+            tEnd.bairro = temp[9];
+            tEnd.rua = temp[10];
+            tEnd.numero = stoi(temp[11]);
+            tVend.setEndereco(tEnd);
+            Data tnasc;
+            tnasc.ano = stoi(temp[13]);
+            tnasc.mes = stoi(temp[14]);
+            tnasc.dia = stoi(temp[15]);
+            tVend.setDataNascimento(tnasc);
+            tVend.setMatricula(temp[17]);
+            tVend.setSalario(stof(temp[18]));
+            tVend.setTipoVendedor(temp[19]);
+            tVend.setDiasFaltas(stoi(temp[20]));
+            Data ting;
+            ting.ano = stoi(temp[22]);
+            ting.mes = stoi(temp[23]);
+            ting.dia = stoi(temp[24]);
+            tVend.setDataingresso(ting);
+            vendedores.push_back(tVend);
+
+            // arquivo de input dos funcionarios deve ser atualizado (ASG, vendedor e gerente)
+            arquivo.open("./leitura/vendedor.txt", ios::out);
+            for(int j = 0; j<vendedores.size() ;j++){
+                arquivo << "#########################################################" << endl;
+                arquivo << "VENDEDOR Nº: " << j << endl;
+                arquivo << "##### DADOS PESSOAIS #####" << endl;
+                arquivo << vendedores[j].getNome() << endl;
+                arquivo << vendedores[j].getCpf() << endl;
+                arquivo << vendedores[j].getQtdFilhos() << endl;
+                arquivo << vendedores[j].getEstadoCivil() << endl;
+                arquivo << "***** Endereço (cidade, cep, bairro, rua e numero) ****" << endl;
+                arquivo << vendedores[j].getEndereco().cidade << endl;
+                arquivo << vendedores[j].getEndereco().cep << endl;
+                arquivo << vendedores[j].getEndereco().bairro << endl;
+                arquivo << vendedores[j].getEndereco().rua << endl;
+                arquivo << vendedores[j].getEndereco().numero << endl;
+                arquivo << "***** Data de nascimento (ano, mes, dia) ****" << endl;
+                arquivo << vendedores[j].getDataNascimento().ano << endl;
+                arquivo << vendedores[j].getDataNascimento().mes << endl;
+                arquivo << vendedores[j].getDataNascimento().dia << endl;
+                arquivo << "##### DADOS FUNCIONAIS #####" << endl;
+                arquivo << vendedores[j].getMatricula() << endl;
+                arquivo << vendedores[j].getSalario() << endl;
+                arquivo << vendedores[j].getTipoVendedor() << endl;
+                arquivo << vendedores[j].getDiasFaltas() << endl;
+                arquivo << "***** Data de ingresso (ano, mes, dia) ****" << endl;
+                arquivo << vendedores[j].getDataingresso().ano << endl;
+                arquivo << vendedores[j].getDataingresso().mes << endl;
+                arquivo << vendedores[j].getDataingresso().dia << endl;
+            }
+            arquivo.close();
+        }
+        else if(temp[0] == "GERENTE")
+        {
+            Gerente tGer;
+
+            tGer.setNome(temp[2]);
+            tGer.setCpf(temp[3]);
+            tGer.setQtdFilhos(stoi(temp[4]));
+            tGer.setEstadoCivil(temp[5]);
+            Endereco tEnd;
+            tEnd.cidade = temp[7];
+            tEnd.cep = temp[8];
+            tEnd.bairro = temp[9];
+            tEnd.rua = temp[10];
+            tEnd.numero = stoi(temp[11]);
+            tGer.setEndereco(tEnd);
+            Data tnasc;
+            tnasc.ano = stoi(temp[13]);
+            tnasc.mes = stoi(temp[14]);
+            tnasc.dia = stoi(temp[15]);
+            tGer.setDataNascimento(tnasc);
+            tGer.setMatricula(temp[17]);
+            tGer.setSalario(stof(temp[18]));
+            tGer.setParticipacaoLucros(stof(temp[19]));
+            tGer.setDiasFaltas(stoi(temp[20]));
+            Data ting;
+            ting.ano = stoi(temp[22]);
+            ting.mes = stoi(temp[23]);
+            ting.dia = stoi(temp[24]);
+            tGer.setDataingresso(ting);
+            gerentes.push_back(tGer);
+
+            // arquivo de input dos funcionarios deve ser atualizado (ASG, vendedor e gerente)
+            arquivo.open("./leitura/gerente.txt", ios::out);
+            for(int j = 0; j<gerentes.size() ;j++){
+                arquivo << "#########################################################" << endl;
+                arquivo << "GERENTE Nº: " << j << endl;
+                arquivo << "##### DADOS PESSOAIS #####" << endl;
+                arquivo << gerentes[j].getNome() << endl;
+                arquivo << gerentes[j].getCpf() << endl;
+                arquivo << gerentes[j].getQtdFilhos() << endl;
+                arquivo << gerentes[j].getEstadoCivil() << endl;
+                arquivo << "***** Endereço (cidade, cep, bairro, rua e numero) ****" << endl;
+                arquivo << gerentes[j].getEndereco().cidade << endl;
+                arquivo << gerentes[j].getEndereco().cep << endl;
+                arquivo << gerentes[j].getEndereco().bairro << endl;
+                arquivo << gerentes[j].getEndereco().rua << endl;
+                arquivo << gerentes[j].getEndereco().numero << endl;
+                arquivo << "***** Data de nascimento (ano, mes, dia) ****" << endl;
+                arquivo << gerentes[j].getDataNascimento().ano << endl;
+                arquivo << gerentes[j].getDataNascimento().mes << endl;
+                arquivo << gerentes[j].getDataNascimento().dia << endl;
+                arquivo << "##### DADOS FUNCIONAIS #####" << endl;
+                arquivo << gerentes[j].getMatricula() << endl;
+                arquivo << gerentes[j].getSalario() << endl;
+                arquivo << gerentes[j].getParticipacaoLucros() << endl;
+                arquivo << gerentes[j].getDiasFaltas() << endl;
+                arquivo << "***** Data de ingresso (ano, mes, dia) ****" << endl;
+                arquivo << gerentes[j].getDataingresso().ano << endl;
+                arquivo << gerentes[j].getDataingresso().mes << endl;
+                arquivo << gerentes[j].getDataingresso().dia << endl;
+            }
+            arquivo.close();
+        }
+    }catch(exception &erro){
+        cout << "Não foi possivel abrir arquivo de novoFuncionario.txt. Erro: " << erro.what() << endl;
+    }
 }
