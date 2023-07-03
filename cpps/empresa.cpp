@@ -97,14 +97,14 @@ void Empresa::carregaFuncoes(){
                 calculaSalarioFuncionario(matricula);
             }else if(temp[i] == "calculaTodoOsSalarios()"){
                 calculaTodoOsSalarios();
-            }else if(temp[i] == "calcularRescisao()"){
+            }else if(temp[i] == "demitirFuncionario()"){
                 string matricula = temp[i+1];
                 Data desligamento;
                 desligamento.ano = stoi(temp[i+2]);
                 desligamento.mes = stoi(temp[i+3]);
                 desligamento.dia = stoi(temp[i+4]);
                 i+=4;
-                calcularRescisao(matricula, desligamento);
+                demitirFuncionario(matricula, desligamento);
             }
         }
     }catch(exception &erro){
@@ -522,21 +522,199 @@ void Empresa::calcularRescisao(string matricula, Data desligamento){
     cout  << "Funcionario não localizado no sistema!" << endl;
 }
 
-  void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
-  {
-    calcularRescisao(matricula, desligamento); // deve chamar essa funcao que calcula a rescisao
-
+void Empresa::demitirFuncionario(std::string matricula, Data desligamento)
+{
+    // deve chamar essa funcao que calcula a rescisao
     // deve produzir um arquivo chamado relatorioDemissional.txt (seguir o padrao no exemplo dado)
-
     // arquivo de input dos funcionarios deve ser atualizado (ASG, vendedor e gerente)
-  }
 
-  void Empresa::contratarFuncionario()
-  {
-    // deve ler novoFuncionario.txt
-    
-    // primeira linha eh o tipo de funcionario (ASG, vendedor ou gerente)
+    for(int i = 0; i<asgs.size() ;i++){
+        if(matricula == asgs[i].getMatricula()){
+            fstream arquivo;
+            arquivo.open("./escrita/relatorioDemissional.txt", ios::out);
+            arquivo << "##############################\n";
+            arquivo << "    Relatorio Demissional     \n";
+            arquivo << "##############################\n";
+            arquivo << "Cargo: ASG" << endl;
+            arquivo << "Nome: " << asgs[i].getNome() << endl;
+            arquivo << "CPF: " << asgs[i].getCpf() << endl;
+            arquivo << "Matrícula: " << asgs[i].getMatricula() << endl;
+            arquivo << "******************************\n";
+            arquivo << "Valor da rescisão: R$" << asgs[i].calcularRecisao(desligamento) << endl; 
+            arquivo << "******************************\n";
+            arquivo << "Tempo de Trabalho: "; // Tempo de Trabalho: 10 anos, 5 meses e 12 dias
+            float anos = (desligamento.ano - 1) - asgs[i].getDataingresso().ano;
+            float meses = (desligamento.mes + 11) - asgs[i].getDataingresso().mes;
+            float dias = (desligamento.dia + 30) - asgs[i].getDataingresso().dia;
+            arquivo << anos << ", ";
+            arquivo << meses << " meses e ";
+            arquivo << dias << " dias\n";
+            arquivo.close();
 
-    // demais linhas devem seguir o padrao dos arquivos de input desses profissionais
+            // removendo o funcionario
+            asgs.erase(asgs.begin()+i);
+            
+            // arquivo de input dos funcionarios deve ser atualizado (ASG, vendedor e gerente)
+            arquivo.open("./leitura/asg.txt", ios::out);
+            for(int j = 0; j<asgs.size() ;j++){
+                arquivo << "#########################################################" << endl;
+                arquivo << "ASG Nº: " << j << endl;
+                arquivo << "##### DADOS PESSOAIS #####" << endl;
+                arquivo << asgs[j].getNome() << endl;
+                arquivo << asgs[j].getQtdFilhos() << endl;
+                arquivo << asgs[j].getEstadoCivil() << endl;
+                arquivo << "***** Endereço (cidade, cep, bairro, rua e numero) ****" << endl;
+                arquivo << asgs[j].getEndereco().cidade << endl;
+                arquivo << asgs[j].getEndereco().cep << endl;
+                arquivo << asgs[j].getEndereco().bairro << endl;
+                arquivo << asgs[j].getEndereco().rua << endl;
+                arquivo << asgs[j].getEndereco().numero << endl;
+                arquivo << "***** Data de nascimento (ano, mes, dia) ****" << endl;
+                arquivo << asgs[j].getDataNascimento().ano << endl;
+                arquivo << asgs[j].getDataNascimento().mes << endl;
+                arquivo << asgs[j].getDataNascimento().dia << endl;
+                arquivo << "##### DADOS FUNCIONAIS #####" << endl;
+                arquivo << asgs[j].getMatricula() << endl;
+                arquivo << asgs[j].getSalario() << endl;
+                arquivo << asgs[j].getAdcionalInsabubridade() << endl;
+                arquivo << asgs[j].getDiasFaltas() << endl;
+                arquivo << "***** Data de ingresso (ano, mes, dia) ****" << endl;
+                arquivo << asgs[j].getDataingresso().ano << endl;
+                arquivo << asgs[j].getDataingresso().mes << endl;
+                arquivo << asgs[j].getDataingresso().dia << endl;
+            }
+            arquivo.close();
+            break;
+        }
+    }
+    for(int i = 0; i<vendedores.size() ;i++){
+        if(matricula == vendedores[i].getMatricula()){
+            fstream arquivo;
+            arquivo.open("./escrita/relatorioDemissional.txt", ios::out);
+            arquivo << "##############################\n";
+            arquivo << "    Relatorio Demissional     \n";
+            arquivo << "##############################\n";
+            arquivo << "Cargo: Vendedor" << endl;
+            arquivo << "Nome: " << vendedores[i].getNome() << endl;
+            arquivo << "CPF: " << vendedores[i].getCpf() << endl;
+            arquivo << "Matrícula: " << vendedores[i].getMatricula() << endl;
+            arquivo << "******************************\n";
+            arquivo << "Valor da rescisão: R$" << vendedores[i].calcularRecisao(desligamento) << endl; 
+            arquivo << "******************************\n";
+            arquivo << "Tempo de Trabalho: "; // Tempo de Trabalho: 10 anos, 5 meses e 12 dias
+            float anos = (desligamento.ano - 1) - vendedores[i].getDataingresso().ano;
+            float meses = (desligamento.mes + 11) - vendedores[i].getDataingresso().mes;
+            float dias = (desligamento.dia + 30) - vendedores[i].getDataingresso().dia;
+            arquivo << anos << ", ";
+            arquivo << meses << " meses e ";
+            arquivo << dias << " dias\n";
+            arquivo.close();
 
-  }
+            // removendo o funcionario
+            vendedores.erase(vendedores.begin()+i);
+            
+            // arquivo de input dos funcionarios deve ser atualizado (ASG, vendedor e gerente)
+            arquivo.open("./leitura/vendedor.txt", ios::out);
+            for(int j = 0; j<vendedores.size() ;j++){
+                arquivo << "#########################################################" << endl;
+                arquivo << "VENDEDOR Nº: " << j << endl;
+                arquivo << "##### DADOS PESSOAIS #####" << endl;
+                arquivo << vendedores[j].getNome() << endl;
+                arquivo << vendedores[j].getQtdFilhos() << endl;
+                arquivo << vendedores[j].getEstadoCivil() << endl;
+                arquivo << "***** Endereço (cidade, cep, bairro, rua e numero) ****" << endl;
+                arquivo << vendedores[j].getEndereco().cidade << endl;
+                arquivo << vendedores[j].getEndereco().cep << endl;
+                arquivo << vendedores[j].getEndereco().bairro << endl;
+                arquivo << vendedores[j].getEndereco().rua << endl;
+                arquivo << vendedores[j].getEndereco().numero << endl;
+                arquivo << "***** Data de nascimento (ano, mes, dia) ****" << endl;
+                arquivo << vendedores[j].getDataNascimento().ano << endl;
+                arquivo << vendedores[j].getDataNascimento().mes << endl;
+                arquivo << vendedores[j].getDataNascimento().dia << endl;
+                arquivo << "##### DADOS FUNCIONAIS #####" << endl;
+                arquivo << vendedores[j].getMatricula() << endl;
+                arquivo << vendedores[j].getSalario() << endl;
+                arquivo << vendedores[j].getTipoVendedor() << endl;
+                arquivo << vendedores[j].getDiasFaltas() << endl;
+                arquivo << "***** Data de ingresso (ano, mes, dia) ****" << endl;
+                arquivo << vendedores[j].getDataingresso().ano << endl;
+                arquivo << vendedores[j].getDataingresso().mes << endl;
+                arquivo << vendedores[j].getDataingresso().dia << endl;
+            }
+            arquivo.close();
+
+            break;
+        }
+    }
+    for(int i = 0; i<gerentes.size() ;i++){
+        if(matricula == gerentes[i].getMatricula()){
+            fstream arquivo;
+            arquivo.open("./escrita/relatorioDemissional.txt", ios::out);
+            arquivo << "##############################\n";
+            arquivo << "    Relatorio Demissional     \n";
+            arquivo << "##############################\n";
+            arquivo << "Cargo: Gerente" << endl;
+            arquivo << "Nome: " << gerentes[i].getNome() << endl;
+            arquivo << "CPF: " << gerentes[i].getCpf() << endl;
+            arquivo << "Matrícula: " << gerentes[i].getMatricula() << endl;
+            arquivo << "******************************\n";
+            arquivo << "Valor da rescisão: R$" << gerentes[i].calcularRecisao(desligamento) << endl; 
+            arquivo << "******************************\n";
+            arquivo << "Tempo de Trabalho: "; // Tempo de Trabalho: 10 anos, 5 meses e 12 dias
+            float anos = (desligamento.ano - 1) - gerentes[i].getDataingresso().ano;
+            float meses = (desligamento.mes + 11) - gerentes[i].getDataingresso().mes;
+            float dias = (desligamento.dia + 30) - gerentes[i].getDataingresso().dia;
+            arquivo << anos << ", ";
+            arquivo << meses << " meses e ";
+            arquivo << dias << " dias\n";
+            arquivo.close();
+
+            // removendo o funcionario
+            gerentes.erase(gerentes.begin()+i);
+            
+            // arquivo de input dos funcionarios deve ser atualizado (ASG, vendedor e gerente)
+            arquivo.open("./leitura/gerente.txt", ios::out);
+            for(int j = 0; j<gerentes.size() ;j++){
+                arquivo << "#########################################################" << endl;
+                arquivo << "GERENTE Nº: " << j << endl;
+                arquivo << "##### DADOS PESSOAIS #####" << endl;
+                arquivo << gerentes[j].getNome() << endl;
+                arquivo << gerentes[j].getQtdFilhos() << endl;
+                arquivo << gerentes[j].getEstadoCivil() << endl;
+                arquivo << "***** Endereço (cidade, cep, bairro, rua e numero) ****" << endl;
+                arquivo << gerentes[j].getEndereco().cidade << endl;
+                arquivo << gerentes[j].getEndereco().cep << endl;
+                arquivo << gerentes[j].getEndereco().bairro << endl;
+                arquivo << gerentes[j].getEndereco().rua << endl;
+                arquivo << gerentes[j].getEndereco().numero << endl;
+                arquivo << "***** Data de nascimento (ano, mes, dia) ****" << endl;
+                arquivo << gerentes[j].getDataNascimento().ano << endl;
+                arquivo << gerentes[j].getDataNascimento().mes << endl;
+                arquivo << gerentes[j].getDataNascimento().dia << endl;
+                arquivo << "##### DADOS FUNCIONAIS #####" << endl;
+                arquivo << gerentes[j].getMatricula() << endl;
+                arquivo << gerentes[j].getSalario() << endl;
+                arquivo << gerentes[j].getParticipacaoLucros() << endl;
+                arquivo << gerentes[j].getDiasFaltas() << endl;
+                arquivo << "***** Data de ingresso (ano, mes, dia) ****" << endl;
+                arquivo << gerentes[j].getDataingresso().ano << endl;
+                arquivo << gerentes[j].getDataingresso().mes << endl;
+                arquivo << gerentes[j].getDataingresso().dia << endl;
+            }
+            arquivo.close();
+            break;
+        }
+    }
+    cout  << "Funcionario não localizado no sistema!" << endl;
+}
+
+void Empresa::contratarFuncionario()
+{
+// deve ler novoFuncionario.txt
+
+// primeira linha eh o tipo de funcionario (ASG, vendedor ou gerente)
+
+// demais linhas devem seguir o padrao dos arquivos de input desses profissionais
+
+}

@@ -1,0 +1,11 @@
+##############################
+    Relatorio Demissional     
+##############################
+Cargo: Vendedor
+Nome: Maximus Decimus Meridius
+CPF: 012.874.523-45
+Matrícula: 72.554-1
+******************************
+Valor da rescisão: R$3502.4
+******************************
+Tempo de Trabalho: 1, 15 meses e 31 dias
