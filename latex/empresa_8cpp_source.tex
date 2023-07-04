@@ -445,670 +445,651 @@
 \DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00447}00447\ }
 \DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00448}00448\ }
 \DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00449}\mbox{\hyperlink{classEmpresa_a27d714d8159e4e8d7abf6499e768442f}{00449}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEmpresa_a27d714d8159e4e8d7abf6499e768442f}{Empresa::calculaTodoOsSalarios}}()\ \{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00450}00450\ \ \ fstream\ relatorio;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00451}00451\ \ \ \textcolor{comment}{//\ Salvar\ funcionarios\ \ \ \ \ //arquivo\ relatorio;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00452}00452\ \ \ relatorio.open(\textcolor{stringliteral}{"{}./escrita/relatórioFinanceiro.txt"{}},\ ios::out);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00453}00453\ \ \ \textcolor{keywordtype}{float}\ soma\_asg\ =\ 0,\ soma\_vendedor\ =\ 0,\ soma\_gerente\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00454}00454\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\ Relatório\ Financeiro\ \#\#\#\#\#\#\#\#\(\backslash\)n\(\backslash\)n"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00455}00455\ \ \ relatorio<<\textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\ Relatório\ Financeiro\ \#\#\#\#\#\#\#\#\(\backslash\)n\(\backslash\)n"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00456}00456\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00457}00457\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00458}00458\ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ ASG\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00459}00459\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ ASG\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00460}00460\ \ \ relatorio<<\textcolor{stringliteral}{"{}Cargo:\ ASG\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00461}00461\ \ \ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00462}00462\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ asgs.size();\ i++)\ \{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00463}00463\ \ \ \ \ cout\ <<asgs[i].getMatricula()<<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ asgs[i].getNome()\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ asgs[i].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00464}00464\ \ \ \ \ relatorio\ <<asgs[i].getMatricula()<<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ asgs[i].getNome()\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ asgs[i].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00465}00465\ \ \ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00466}00466\ \ \ \ \ soma\_asg\ +=\ asgs[i].getSalario();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00467}00467\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00468}00468\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Total\ ASG:\ "{}}\ <<\ soma\_asg\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00469}00469\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Total\ ASG:\ "{}}\ <<\ soma\_asg\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00470}00470\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00471}00471\ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ VENDEDOR\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00472}00472\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00473}00473\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00474}00474\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Vendedor\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00475}00475\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Vendedor\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00476}00476\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00477}00477\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ vendedores.size();\ i++)\ \{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00478}00478\ \ \ \ \ cout\ <<\ vendedores[i].getMatricula()\ <<\textcolor{stringliteral}{"{}\ -\/\ "{}}<<\ vendedores[i].getNome()<<\ \textcolor{stringliteral}{"{}\ -\/\ R\$\ "{}}\ <<\ vendedores[i].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00479}00479\ \ \ \ \ relatorio\ <<\ vendedores[i].getMatricula()\ <<\textcolor{stringliteral}{"{}\ -\/\ "{}}<<\ vendedores[i].getNome()<<\ \textcolor{stringliteral}{"{}\ -\/\ R\$\ "{}}\ <<\ vendedores[i].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00480}00480\ \ \ \ \ \ soma\_vendedor\ +=\ vendedores[i].getSalario();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00481}00481\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00482}00482\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00483}00483\ \ \ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00484}00484\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Total\ Vendedor:\ "{}}\ <<\ soma\_vendedor\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00485}00485\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Total\ Vendedor:\ "{}}<<\ soma\_vendedor\ <<\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00486}00486\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00487}00487\ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Gerentes-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00488}00488\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Gerente\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00489}00489\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Gerente\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00490}00490\ \ \ \textcolor{comment}{//\ arquivo\ relatorio}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00491}00491\ \ \ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00492}00492\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ gerentes.size();\ i++)\ \{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00493}00493\ \ \ \ \ cout\ <<gerentes[i].getMatricula()\ <<\textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ gerentes[i].getNome()<<\ \textcolor{stringliteral}{"{}\ -\/\ R\$"{}}\ <<\ gerentes[i].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00494}00494\ \ \ \ \ relatorio\ <<\ gerentes[i].getMatricula()\ <<\textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ gerentes[i].getNome()\ <<\ \textcolor{stringliteral}{"{}\ -\/\ R\$"{}}\ <<\ gerentes[i].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00495}00495\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00496}00496\ \ \ \ \ soma\_gerente\ +=\ gerentes[i].getSalario();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00497}00497\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00498}00498\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Total\ Gerente:\ "{}}\ <<\ soma\_gerente\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00499}00499\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Total\ Gerente:\ "{}}\ <<\ soma\_gerente\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00500}00500\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00501}00501\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/\ total\ empresa\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00502}00502\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00503}00503\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00504}00504\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CUSTO\ TOTAL:\ R\$"{}}\ <<\ (soma\_asg\ +\ soma\_gerente\ +\ soma\_vendedor)\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00505}00505\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}CUSTO\ TOTAL:\ R\$"{}}\ <<\ (soma\_asg\ +\ soma\_gerente\ +\ soma\_vendedor)\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00506}00506\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00507}00507\ \ \ \textcolor{keywordtype}{float}\ faturamento\ =\ this-\/>\mbox{\hyperlink{classEmpresa_a61dd1b1f6921650ab6c35bb229df35ce}{getFaturamentoMensal}}();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00508}00508\ \ \ \textcolor{comment}{//faturamento\ mensal}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00509}00509\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00510}00510\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00511}00511\ \ \ cout<<\textcolor{stringliteral}{"{}FATURAMENTO\ MENSAL:\ "{}}<<\ faturamento\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}<<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00512}00512\ \ \ relatorio<<\textcolor{stringliteral}{"{}FATURAMENTO\ MENSAL:\ "{}}<<faturamento<<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}<<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00513}00513\ \ \ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00514}00514\ \ \ \textcolor{comment}{//\ calculos}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00515}00515\ \ \ \textcolor{keywordtype}{float}\ porce\_asg,\ porce\_vendedor,\ porce\_gerente,\ lucro\_empresa,\ custo\_total;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00516}00516\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00517}00517\ \ \ custo\_total\ =\ (soma\_asg\ +\ soma\_gerente\ +\ soma\_vendedor);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00518}00518\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00519}00519\ \ \ porce\_asg\ =\ (soma\_asg*100.0)/custo\_total;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00520}00520\ \ \ porce\_vendedor\ =\ (soma\_vendedor*100.0)/custo\_total;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00521}00521\ \ \ porce\_gerente\ =\ (soma\_gerente*100.0)/custo\_total;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00522}00522\ \ \ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00523}00523\ \ \ lucro\_empresa\ =\ faturamento\ -\/\ custo\_total;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00524}00524\ \ \ \textcolor{comment}{//\ porcentagens\ custo\ por\ categoria}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00525}00525\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Custo\ ASG(\%):\ "{}}\ <<\ porce\_asg\ <<\textcolor{stringliteral}{"{}\%"{}}<<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00526}00526\ \ \ cout<<\textcolor{stringliteral}{"{}Custo\ Vendedor(\%):\ "{}}<<porce\_vendedor\ <<\textcolor{stringliteral}{"{}\%"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00527}00527\ \ \ cout<<\textcolor{stringliteral}{"{}Custo\ Gerente(\%):\ "{}}\ <<porce\_gerente<<\textcolor{stringliteral}{"{}\%"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00528}00528\ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Custo\ ASG(\%):\ "{}}\ <<\ porce\_asg\ <<\textcolor{stringliteral}{"{}\%"{}}<<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00529}00529\ \ \ \ relatorio<<\textcolor{stringliteral}{"{}Custo\ Vendedor(\%):\ "{}}<<porce\_vendedor\ <<\textcolor{stringliteral}{"{}\%"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00530}00530\ \ \ \ relatorio<<\textcolor{stringliteral}{"{}Custo\ Gerente(\%):\ "{}}\ <<porce\_gerente<<\textcolor{stringliteral}{"{}\%"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00531}00531\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00532}00532\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00533}00533\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00534}00534\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}LUCRO\ DA\ EMPRESA:\ "{}}<<lucro\_empresa\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00535}00535\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}LUCRO\ DA\ EMPRESA:\ "{}}<<lucro\_empresa<<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00536}00536\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00537}00537\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00538}00538\ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00539}00539\ \ \ \textcolor{keywordflow}{if}(lucro\_empresa>0)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00540}00540\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}SITUAÇÂO:\ lucro"{}}<<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00541}00541\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}SITUAÇÂO:\ Lucro"{}}<<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00542}00542\ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00543}00543\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}SITUAÇÂO:\ Prejuízo"{}}<<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00544}00544\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}SITUAÇÂO:\ Prejuízo"{}}<<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00545}00545\ \ \ \}\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00546}00546\ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00547}00547\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00548}00548\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00549}00549\ \textcolor{comment}{/*void\ Empresa::calculaTodoOsSalarios()\{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00550}00550\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00551}00551\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00552}00552\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00553}00553\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00554}00554\ \textcolor{comment}{\ \ \ \ fstream\ relatorio;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00555}00555\ \textcolor{comment}{\ \ \ \ relatorio.open("{}./escrita/relatorioFinanceiro.txt"{},\ ios::out);}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00556}00556\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00557}00557\ \textcolor{comment}{\ \ \ \ float\ soma\ =\ 0,\ somaAsg\ =\ 0,\ somaVend\ =\ 0,\ somaGer\ =\ 0;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00558}00558\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00559}00559\ \textcolor{comment}{\ \ \ \ cout\ <<\ "{}\(\backslash\)n\#\#\#\#\#\#\#\#\#\#\ \ \ \ Calculando\ todos\ os\ salários\ \ \ \ \#\#\#\#\#\#\#\#\#\#"{}\ <<endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00560}00560\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}\#\#\#\#\#\#\#\#\#\#\ \ \ \ ASGS\ \ \ \ \#\#\#\#\#\#\#\#\#\#"{}\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00561}00561\ \textcolor{comment}{\ \ \ \ for(int\ i\ =\ 0;\ i<asgs.size()\ ;i++)\{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00562}00562\ \textcolor{comment}{\ \ \ \ \ \ \ \ relatorio\ <<\ "{}Nome:\ "{}\ <<\ asgs[i].getNome()\ <<\ "{}\ -\/\ R\$\ "{}\ <<\ asgs[i].getSalario()\ <<\ endl;\ }}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00563}00563\ \textcolor{comment}{\ \ \ \ \ \ \ \ somaAsg\ +=\ asgs[i].calcularSalario(asgs[i].getDiasFaltas());}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00564}00564\ \textcolor{comment}{\ \ \ \ \ \ \ \ soma\ +=\ somaAsg;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00565}00565\ \textcolor{comment}{\ \ \ \ \}}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00566}00566\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}Soma\ ASGs:\ "{}\ <<somaAsg\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00567}00567\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}\(\backslash\)n\#\#\#\#\#\#\#\#\#\#\ \ \ \ Vendedores\ \ \ \ \#\#\#\#\#\#\#\#\#\#"{}\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00568}00568\ \textcolor{comment}{\ \ \ \ for(int\ i\ =\ 0;\ i<vendedores.size()\ ;i++)\{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00569}00569\ \textcolor{comment}{\ \ \ \ \ \ \ \ relatorio\ <<\ "{}Nome:\ "{}\ <<\ vendedores[i].getNome()\ <<\ "{}\ -\/\ R\$\ "{}\ <<\ vendedores[i].getSalario()\ <<\ endl;\ }}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00570}00570\ \textcolor{comment}{\ \ \ \ \ \ \ \ somaVend\ +=\ vendedores[i].calcularSalario(vendedores[i].getDiasFaltas());}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00571}00571\ \textcolor{comment}{\ \ \ \ \ \ \ \ soma\ +=\ somaVend;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00572}00572\ \textcolor{comment}{\ \ \ \ \}}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00573}00573\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}Soma\ Vendedores:\ "{}\ <<\ somaVend\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00574}00574\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}\(\backslash\)n\#\#\#\#\#\#\#\#\#\#\ \ \ \ Gerentes\ \ \ \ \#\#\#\#\#\#\#\#\#\#"{}\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00575}00575\ \textcolor{comment}{\ \ \ \ for(int\ i\ =\ 0;\ i<gerentes.size()\ ;i++)\{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00576}00576\ \textcolor{comment}{\ \ \ \ \ \ \ \ relatorio\ <<\ "{}Nome:\ "{}\ <<\ gerentes[i].getNome()\ <<\ "{}\ -\/\ R\$\ "{}\ <<\ gerentes[i].getSalario()\ <<\ endl;\ }}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00577}00577\ \textcolor{comment}{\ \ \ \ \ \ \ \ somaGer\ +=\ gerentes[i].calcularSalario(gerentes[i].getDiasFaltas());}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00578}00578\ \textcolor{comment}{\ \ \ \ \ \ \ \ soma\ +=\ somaGer;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00579}00579\ \textcolor{comment}{\ \ \ \ \}}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00580}00580\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}Soma\ Gerentes:\ "{}\ <<\ somaGer\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00581}00581\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00582}00582\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}****************************\ "{}\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00583}00583\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}Soma\ de\ salarios:\ "{}\ <<\ soma\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00584}00584\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}****************************\ "{}\ <<\ endl;}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00585}00585\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00586}00586\ \textcolor{comment}{\ \ \ \ cout\ \ <<\ "{}Soma\ dos\ salarios\ calculados:\ "{}<<\ soma\ <<\ endl;\ //\ CUSTO\ TOTAL:\ R\$\ 14,802.18}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00587}00587\ \textcolor{comment}{\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00588}00588\ \textcolor{comment}{\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00589}00589\ \textcolor{comment}{\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00590}00590\ \textcolor{comment}{\ \ \ \ FATURAMENTO\ MENSAL:\ 20,957.15}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00591}00591\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00592}00592\ \textcolor{comment}{\ \ \ \ Custo\ ASG(\%):\ 20.20\%}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00593}00593\ \textcolor{comment}{\ \ \ \ Custo\ Vendedor(\%):\ 59.37\%}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00594}00594\ \textcolor{comment}{\ \ \ \ Custo\ GErente(\%):\ 20,42\%}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00595}00595\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00596}00596\ \textcolor{comment}{\ \ \ \ LUCRO\ DA\ EMPRESA:\ 6154.97}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00597}00597\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00598}00598\ \textcolor{comment}{\ \ \ \ SITUAÇÃO:\ Lucro}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00599}00599\ \textcolor{comment}{\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00600}00600\ \textcolor{comment}{\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00601}00601\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00602}00602\ \textcolor{comment}{\}}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00603}00603\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00604}00604\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00605}\mbox{\hyperlink{classEmpresa_ae72390259e15695b3bc73dfb5d651e41}{00605}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEmpresa_ae72390259e15695b3bc73dfb5d651e41}{Empresa::calcularRescisao}}(\textcolor{keywordtype}{string}\ matricula,\ \mbox{\hyperlink{structData}{Data}}\ desligamento)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00606}00606\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\#\#\#\#\#\#\#\#\#\#\ \ \ \ Calculando\ a\ rescisão\ de\ funcionário\ \ \ \ \#\#\#\#\#\#\#\#\#\#"{}}\ <<endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00607}00607\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<asgs.size()\ ;i++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00608}00608\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ asgs[i].getMatricula())\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00609}00609\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Função:\ ASG"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00610}00610\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ asgs[i].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00611}00611\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Salario\ base:\ "{}}\ <<\ asgs[i].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00612}00612\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rescisão\ calculada:\ "{}}\ <<\ asgs[i].calcularRecisao(desligamento)\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00613}00613\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00614}00614\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00615}00615\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00616}00616\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<vendedores.size()\ ;i++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00617}00617\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ vendedores[i].getMatricula())\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00618}00618\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Função:\ Vendedor"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00619}00619\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ vendedores[i].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00620}00620\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Salario\ base:\ "{}}\ <<\ vendedores[i].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00621}00621\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rescisão\ calculada:\ "{}}\ <<\ vendedores[i].calcularRecisao(desligamento)\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00622}00622\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00623}00623\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00624}00624\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00625}00625\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<gerentes.size()\ ;i++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00626}00626\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ gerentes[i].getMatricula())\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00627}00627\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Função:\ Gerente"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00628}00628\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ gerentes[i].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Salario\ base:\ "{}}\ <<\ gerentes[i].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00630}00630\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rescisão\ calculada:\ "{}}\ <<\ gerentes[i].calcularRecisao(desligamento)\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00631}00631\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00632}00632\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00633}00633\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00634}00634\ \ \ \ \ cout\ \ <<\ \textcolor{stringliteral}{"{}Funcionario\ não\ localizado\ no\ sistema!"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00635}00635\ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00636}00636\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00637}\mbox{\hyperlink{classEmpresa_a26d7c72a46c84277ee2e99ed4726dfab}{00637}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEmpresa_a26d7c72a46c84277ee2e99ed4726dfab}{Empresa::demitirFuncionario}}(std::string\ matricula,\ \mbox{\hyperlink{structData}{Data}}\ desligamento)}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00638}00638\ \{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00639}00639\ \ \ \ \ \textcolor{comment}{//\ deve\ chamar\ essa\ funcao\ que\ calcula\ a\ rescisao}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00640}00640\ \ \ \ \ \textcolor{comment}{//\ deve\ produzir\ um\ arquivo\ chamado\ relatorioDemissional.txt\ (seguir\ o\ padrao\ no\ exemplo\ dado)}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00641}00641\ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00642}00642\ \ \ \ \ \textcolor{keywordtype}{int}\ achou\_funcionario\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00643}00643\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<asgs.size()\ ;i++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00644}00644\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ asgs[i].getMatricula())\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00645}00645\ \ \ \ \ \ \ \ \ \ \ \ \ achou\_funcionario\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00646}00646\ \ \ \ \ \ \ \ \ \ \ \ \ fstream\ arquivo;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00647}00647\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./escrita/relatorioDemissional.txt"{}},\ ios::out);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00648}00648\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00649}00649\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00650}00650\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00651}00651\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Cargo:\ ASG"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00652}00652\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ asgs[i].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00653}00653\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ asgs[i].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00654}00654\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ asgs[i].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00655}00655\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00656}00656\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ asgs[i].calcularRecisao(desligamento)\ <<\ endl;\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00657}00657\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00658}00658\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00659}00659\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ asgs[i].getDataingresso().ano;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00660}00660\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ asgs[i].getDataingresso().mes;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00661}00661\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ asgs[i].getDataingresso().dia;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00662}00662\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00663}00663\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00664}00664\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00665}00665\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00666}00666\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00667}00667\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IMPRIMINDO\ NO\ TERMINAL}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00668}00668\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00669}00669\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00670}00670\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00671}00671\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ ASG"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00672}00672\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ asgs[i].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00673}00673\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ asgs[i].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00674}00674\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ asgs[i].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00675}00675\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00676}00676\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ asgs[i].calcularRecisao(desligamento)\ <<\ endl;\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00677}00677\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00678}00678\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00679}00679\ \ \ \ \ \ \ \ \ \ \ \ \ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ asgs[i].getDataingresso().ano;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00680}00680\ \ \ \ \ \ \ \ \ \ \ \ \ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ asgs[i].getDataingresso().mes;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00681}00681\ \ \ \ \ \ \ \ \ \ \ \ \ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ asgs[i].getDataingresso().dia;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00682}00682\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00683}00683\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00684}00684\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00685}00685\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00686}00686\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIM\ IMPRESSAO\ NO\ TERMINAL}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00687}00687\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00688}00688\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ removendo\ o\ funcionario}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00689}00689\ \ \ \ \ \ \ \ \ \ \ \ \ asgs.erase(asgs.begin()+i);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00690}00690\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00691}00691\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00692}00692\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/asg.txt"{}},\ ios::out);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00693}00693\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<asgs.size()\ ;j++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00694}00694\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00695}00695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}ASG\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00696}00696\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00697}00697\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00698}00698\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00699}00699\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getQtdFilhos()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00700}00700\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEstadoCivil()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00701}00701\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00702}00702\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().cidade\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00703}00703\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().cep\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00704}00704\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().bairro\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00705}00705\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().rua\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00706}00706\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().numero\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00707}00707\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00708}00708\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00709}00709\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00710}00710\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00711}00711\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00712}00712\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00713}00713\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00714}00714\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getAdcionalInsabubridade()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00715}00715\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDiasFaltas()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00716}00716\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00717}00717\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00718}00718\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00719}00719\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00720}00720\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00721}00721\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00722}00722\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00723}00723\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00724}00724\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00725}00725\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<vendedores.size()\ ;i++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00726}00726\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ vendedores[i].getMatricula())\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00727}00727\ \ \ \ \ \ \ \ \ \ \ \ \ achou\_funcionario\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00728}00728\ \ \ \ \ \ \ \ \ \ \ \ \ fstream\ arquivo;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00729}00729\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./escrita/relatorioDemissional.txt"{}},\ ios::out);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00730}00730\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00731}00731\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00732}00732\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00733}00733\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Vendedor"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00734}00734\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ vendedores[i].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00735}00735\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ vendedores[i].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00736}00736\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ vendedores[i].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00737}00737\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00738}00738\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ vendedores[i].calcularRecisao(desligamento)\ <<\ endl;\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00739}00739\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00740}00740\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00741}00741\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ vendedores[i].getDataingresso().ano;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00742}00742\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ vendedores[i].getDataingresso().mes;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00743}00743\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ vendedores[i].getDataingresso().dia;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00744}00744\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00745}00745\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00746}00746\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00747}00747\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00748}00748\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00749}00749\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IMPRIMINDO\ NO\ TERMINAL}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00750}00750\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00751}00751\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00752}00752\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00753}00753\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ VENDEDOR"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00754}00754\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ vendedores[i].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00755}00755\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ vendedores[i].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00756}00756\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ vendedores[i].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00757}00757\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00758}00758\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ vendedores[i].calcularRecisao(desligamento)\ <<\ endl;\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00759}00759\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00760}00760\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00761}00761\ \ \ \ \ \ \ \ \ \ \ \ \ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ vendedores[i].getDataingresso().ano;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00762}00762\ \ \ \ \ \ \ \ \ \ \ \ \ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ vendedores[i].getDataingresso().mes;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00763}00763\ \ \ \ \ \ \ \ \ \ \ \ \ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ vendedores[i].getDataingresso().dia;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00764}00764\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00765}00765\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00766}00766\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00767}00767\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00768}00768\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIM\ IMPRESSAO\ NO\ TERMINAL}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00769}00769\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00770}00770\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ removendo\ o\ funcionario}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00771}00771\ \ \ \ \ \ \ \ \ \ \ \ \ vendedores.erase(vendedores.begin()+i);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00772}00772\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00773}00773\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00774}00774\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/vendedor.txt"{}},\ ios::out);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00775}00775\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<vendedores.size()\ ;j++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00776}00776\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00777}00777\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}VENDEDOR\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00778}00778\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00779}00779\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00780}00780\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00781}00781\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getQtdFilhos()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00782}00782\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEstadoCivil()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00783}00783\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00784}00784\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().cidade\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00785}00785\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().cep\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00786}00786\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().bairro\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00787}00787\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().rua\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00788}00788\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().numero\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00789}00789\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00790}00790\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00791}00791\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00792}00792\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00793}00793\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00794}00794\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00795}00795\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00796}00796\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getTipoVendedor()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00797}00797\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDiasFaltas()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00798}00798\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00799}00799\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00800}00800\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00801}00801\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00802}00802\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00803}00803\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00804}00804\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00805}00805\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00806}00806\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00807}00807\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<gerentes.size()\ ;i++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00808}00808\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ gerentes[i].getMatricula())\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00809}00809\ \ \ \ \ \ \ \ \ \ \ \ \ achou\_funcionario\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00810}00810\ \ \ \ \ \ \ \ \ \ \ \ \ fstream\ arquivo;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00811}00811\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./escrita/relatorioDemissional.txt"{}},\ ios::out);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00812}00812\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00813}00813\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00814}00814\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00815}00815\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Gerente"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00816}00816\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ gerentes[i].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00817}00817\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ gerentes[i].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00818}00818\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ gerentes[i].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00819}00819\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00820}00820\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ gerentes[i].calcularRecisao(desligamento)\ <<\ endl;\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00821}00821\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00822}00822\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00823}00823\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ gerentes[i].getDataingresso().ano;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00824}00824\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ gerentes[i].getDataingresso().mes;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00825}00825\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ gerentes[i].getDataingresso().dia;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00826}00826\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00827}00827\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00828}00828\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00829}00829\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00830}00830\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00831}00831\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IMPRIMINDO\ NO\ TERMINAL}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00832}00832\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00833}00833\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00834}00834\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00835}00835\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ GERENTE"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00836}00836\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ gerentes[i].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00837}00837\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ gerentes[i].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00838}00838\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ gerentes[i].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00839}00839\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00840}00840\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ gerentes[i].calcularRecisao(desligamento)\ <<\ endl;\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00841}00841\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00842}00842\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00843}00843\ \ \ \ \ \ \ \ \ \ \ \ \ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ gerentes[i].getDataingresso().ano;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00844}00844\ \ \ \ \ \ \ \ \ \ \ \ \ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ gerentes[i].getDataingresso().mes;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00845}00845\ \ \ \ \ \ \ \ \ \ \ \ \ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ gerentes[i].getDataingresso().dia;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00846}00846\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00847}00847\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00848}00848\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00849}00849\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00850}00850\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIM\ IMPRESSAO\ NO\ TERMINAL}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00851}00851\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00852}00852\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ removendo\ o\ funcionario}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00853}00853\ \ \ \ \ \ \ \ \ \ \ \ \ gerentes.erase(gerentes.begin()+i);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00854}00854\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00855}00855\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00856}00856\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/gerente.txt"{}},\ ios::out);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00857}00857\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<gerentes.size()\ ;j++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00858}00858\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00859}00859\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}GERENTE\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00860}00860\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00861}00861\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00862}00862\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00863}00863\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getQtdFilhos()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00864}00864\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEstadoCivil()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00865}00865\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00866}00866\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().cidade\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00867}00867\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().cep\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00868}00868\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().bairro\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00869}00869\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().rua\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00870}00870\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().numero\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00871}00871\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00872}00872\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00873}00873\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00874}00874\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00875}00875\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00876}00876\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00877}00877\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00878}00878\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getParticipacaoLucros()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00879}00879\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDiasFaltas()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00880}00880\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00881}00881\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00882}00882\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00883}00883\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00884}00884\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00885}00885\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00886}00886\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00887}00887\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00888}00888\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00889}00889\ \ \ \ \ \textcolor{keywordflow}{if}(achou\_funcionario\ ==\ 0)\ cout\ \ <<\ \textcolor{stringliteral}{"{}Funcionario\ não\ localizado\ no\ sistema!"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00890}00890\ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00450}00450\ \ \ \ \ fstream\ relatorio;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00451}00451\ \ \ \ \ \textcolor{comment}{//\ Salvar\ funcionarios\ \ \ \ \ //arquivo\ relatorio;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00452}00452\ \ \ \ \ relatorio.open(\textcolor{stringliteral}{"{}./escrita/relatórioFinanceiro.txt"{}},\ ios::out);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00453}00453\ \ \ \ \ \textcolor{keywordtype}{float}\ soma\_asg\ =\ 0,\ soma\_vendedor\ =\ 0,\ soma\_gerente\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00454}00454\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\ Relatório\ Financeiro\ \#\#\#\#\#\#\#\#\(\backslash\)n\(\backslash\)n"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00455}00455\ \ \ \ \ relatorio<<\textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\ Relatório\ Financeiro\ \#\#\#\#\#\#\#\#\(\backslash\)n\(\backslash\)n"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00456}00456\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00457}00457\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ ASG\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00458}00458\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ ASG\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00459}00459\ \ \ \ \ relatorio<<\textcolor{stringliteral}{"{}Cargo:\ ASG\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00460}00460\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ asgs.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00461}00461\ \ \ \ \ \ \ \ \ cout\ <<asgs[i].getMatricula()<<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ asgs[i].getNome()\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ asgs[i].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00462}00462\ \ \ \ \ \ \ \ \ relatorio\ <<asgs[i].getMatricula()<<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ asgs[i].getNome()\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ asgs[i].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00463}00463\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00464}00464\ \ \ \ \ \ \ \ \ soma\_asg\ +=\ asgs[i].getSalario();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00465}00465\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00466}00466\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Total\ ASG:\ "{}}\ <<\ soma\_asg\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00467}00467\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Total\ ASG:\ "{}}\ <<\ soma\_asg\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00468}00468\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00469}00469\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ VENDEDOR\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00470}00470\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00471}00471\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00472}00472\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Vendedor\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00473}00473\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Vendedor\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00474}00474\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ vendedores.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00475}00475\ \ \ \ \ \ \ \ \ cout\ <<\ vendedores[i].getMatricula()\ <<\textcolor{stringliteral}{"{}\ -\/\ "{}}<<\ vendedores[i].getNome()<<\ \textcolor{stringliteral}{"{}\ -\/\ R\$\ "{}}\ <<\ vendedores[i].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00476}00476\ \ \ \ \ \ \ \ \ relatorio\ <<\ vendedores[i].getMatricula()\ <<\textcolor{stringliteral}{"{}\ -\/\ "{}}<<\ vendedores[i].getNome()<<\ \textcolor{stringliteral}{"{}\ -\/\ R\$\ "{}}\ <<\ vendedores[i].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00477}00477\ \ \ \ \ \ \ \ \ soma\_vendedor\ +=\ vendedores[i].getSalario();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00478}00478\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00479}00479\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Total\ Vendedor:\ "{}}\ <<\ soma\_vendedor\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00480}00480\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Total\ Vendedor:\ "{}}<<\ soma\_vendedor\ <<\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00481}00481\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00482}00482\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Gerentes-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00483}00483\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Gerente\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00484}00484\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Gerente\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00485}00485\ \ \ \ \ \textcolor{comment}{//\ arquivo\ relatorio}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00486}00486\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ gerentes.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00487}00487\ \ \ \ \ \ \ \ \ cout\ <<gerentes[i].getMatricula()\ <<\textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ gerentes[i].getNome()<<\ \textcolor{stringliteral}{"{}\ -\/\ R\$"{}}\ <<\ gerentes[i].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00488}00488\ \ \ \ \ \ \ \ \ relatorio\ <<\ gerentes[i].getMatricula()\ <<\textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ gerentes[i].getNome()\ <<\ \textcolor{stringliteral}{"{}\ -\/\ R\$"{}}\ <<\ gerentes[i].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00489}00489\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00490}00490\ \ \ \ \ \ \ \ \ soma\_gerente\ +=\ gerentes[i].getSalario();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00491}00491\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00492}00492\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Total\ Gerente:\ "{}}\ <<\ soma\_gerente\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00493}00493\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Total\ Gerente:\ "{}}\ <<\ soma\_gerente\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00494}00494\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00495}00495\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/\ total\ empresa\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00496}00496\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00497}00497\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00498}00498\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CUSTO\ TOTAL:\ R\$"{}}\ <<\ (soma\_asg\ +\ soma\_gerente\ +\ soma\_vendedor)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00499}00499\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}CUSTO\ TOTAL:\ R\$"{}}\ <<\ (soma\_asg\ +\ soma\_gerente\ +\ soma\_vendedor)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00500}00500\ \ \ \ \ \textcolor{keywordtype}{float}\ faturamento\ =\ this-\/>\mbox{\hyperlink{classEmpresa_a61dd1b1f6921650ab6c35bb229df35ce}{getFaturamentoMensal}}();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00501}00501\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00502}00502\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00503}00503\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}FATURAMENTO\ MENSAL:\ "{}}<<\ faturamento\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}<<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00504}00504\ \ \ \ \ relatorio<<\textcolor{stringliteral}{"{}FATURAMENTO\ MENSAL:\ "{}}<<faturamento<<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}<<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00505}00505\ \ \ \ \ \textcolor{comment}{//\ calculos}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00506}00506\ \ \ \ \ \textcolor{keywordtype}{float}\ porce\_asg,\ porce\_vendedor,\ porce\_gerente,\ lucro\_empresa,\ custo\_total;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00507}00507\ \ \ \ \ custo\_total\ =\ (soma\_asg\ +\ soma\_gerente\ +\ soma\_vendedor);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00508}00508\ \ \ \ \ porce\_asg\ =\ (soma\_asg*100.0)/custo\_total;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00509}00509\ \ \ \ \ porce\_vendedor\ =\ (soma\_vendedor*100.0)/custo\_total;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00510}00510\ \ \ \ \ porce\_gerente\ =\ (soma\_gerente*100.0)/custo\_total;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00511}00511\ \ \ \ \ lucro\_empresa\ =\ faturamento\ -\/\ custo\_total;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00512}00512\ \ \ \ \ \textcolor{comment}{//\ porcentagens\ custo\ por\ categoria}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00513}00513\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Custo\ ASG(\%):\ "{}}\ <<\ porce\_asg\ <<\textcolor{stringliteral}{"{}\%"{}}<<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00514}00514\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Custo\ Vendedor(\%):\ "{}}<<porce\_vendedor\ <<\textcolor{stringliteral}{"{}\%"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00515}00515\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Custo\ Gerente(\%):\ "{}}\ <<porce\_gerente<<\textcolor{stringliteral}{"{}\%"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00516}00516\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}Custo\ ASG(\%):\ "{}}\ <<\ porce\_asg\ <<\textcolor{stringliteral}{"{}\%"{}}<<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00517}00517\ \ \ \ \ relatorio<<\textcolor{stringliteral}{"{}Custo\ Vendedor(\%):\ "{}}<<porce\_vendedor\ <<\textcolor{stringliteral}{"{}\%"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00518}00518\ \ \ \ \ relatorio<<\textcolor{stringliteral}{"{}Custo\ Gerente(\%):\ "{}}\ <<porce\_gerente<<\textcolor{stringliteral}{"{}\%"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00519}00519\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00520}00520\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00521}00521\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}LUCRO\ DA\ EMPRESA:\ "{}}<<lucro\_empresa\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00522}00522\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}LUCRO\ DA\ EMPRESA:\ "{}}<<lucro\_empresa<<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00523}00523\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00524}00524\ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00525}00525\ \ \ \ \ \textcolor{keywordflow}{if}(lucro\_empresa>0)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00526}00526\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}SITUAÇÂO:\ lucro"{}}<<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00527}00527\ \ \ \ \ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}SITUAÇÂO:\ Lucro"{}}<<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00528}00528\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00529}00529\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}SITUAÇÂO:\ Prejuízo"{}}<<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00530}00530\ \ \ \ \ \ \ \ \ relatorio\ <<\ \textcolor{stringliteral}{"{}SITUAÇÂO:\ Prejuízo"{}}<<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00531}00531\ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00532}00532\ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00533}00533\ \textcolor{comment}{/*void\ Empresa::calculaTodoOsSalarios()\{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00534}00534\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00535}00535\ \textcolor{comment}{\ \ \ \ fstream\ relatorio;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00536}00536\ \textcolor{comment}{\ \ \ \ relatorio.open("{}./escrita/relatorioFinanceiro.txt"{},\ ios::out);}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00537}00537\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00538}00538\ \textcolor{comment}{\ \ \ \ float\ soma\ =\ 0,\ somaAsg\ =\ 0,\ somaVend\ =\ 0,\ somaGer\ =\ 0;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00539}00539\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00540}00540\ \textcolor{comment}{\ \ \ \ cout\ <<\ "{}\(\backslash\)n\#\#\#\#\#\#\#\#\#\#\ \ \ \ Calculando\ todos\ os\ salários\ \ \ \ \#\#\#\#\#\#\#\#\#\#"{}\ <<endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00541}00541\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}\#\#\#\#\#\#\#\#\#\#\ \ \ \ ASGS\ \ \ \ \#\#\#\#\#\#\#\#\#\#"{}\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00542}00542\ \textcolor{comment}{\ \ \ \ for(int\ i\ =\ 0;\ i<asgs.size()\ ;i++)\{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00543}00543\ \textcolor{comment}{\ \ \ \ \ \ \ \ relatorio\ <<\ "{}Nome:\ "{}\ <<\ asgs[i].getNome()\ <<\ "{}\ -\/\ R\$\ "{}\ <<\ asgs[i].getSalario()\ <<\ endl;\ }}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00544}00544\ \textcolor{comment}{\ \ \ \ \ \ \ \ somaAsg\ +=\ asgs[i].calcularSalario(asgs[i].getDiasFaltas());}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00545}00545\ \textcolor{comment}{\ \ \ \ \ \ \ \ soma\ +=\ somaAsg;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00546}00546\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00547}00547\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}Soma\ ASGs:\ "{}\ <<somaAsg\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00548}00548\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}\(\backslash\)n\#\#\#\#\#\#\#\#\#\#\ \ \ \ Vendedores\ \ \ \ \#\#\#\#\#\#\#\#\#\#"{}\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00549}00549\ \textcolor{comment}{\ \ \ \ for(int\ i\ =\ 0;\ i<vendedores.size()\ ;i++)\{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00550}00550\ \textcolor{comment}{\ \ \ \ \ \ \ \ relatorio\ <<\ "{}Nome:\ "{}\ <<\ vendedores[i].getNome()\ <<\ "{}\ -\/\ R\$\ "{}\ <<\ vendedores[i].getSalario()\ <<\ endl;\ }}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00551}00551\ \textcolor{comment}{\ \ \ \ \ \ \ \ somaVend\ +=\ vendedores[i].calcularSalario(vendedores[i].getDiasFaltas());}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00552}00552\ \textcolor{comment}{\ \ \ \ \ \ \ \ soma\ +=\ somaVend;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00553}00553\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00554}00554\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}Soma\ Vendedores:\ "{}\ <<\ somaVend\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00555}00555\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}\(\backslash\)n\#\#\#\#\#\#\#\#\#\#\ \ \ \ Gerentes\ \ \ \ \#\#\#\#\#\#\#\#\#\#"{}\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00556}00556\ \textcolor{comment}{\ \ \ \ for(int\ i\ =\ 0;\ i<gerentes.size()\ ;i++)\{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00557}00557\ \textcolor{comment}{\ \ \ \ \ \ \ \ relatorio\ <<\ "{}Nome:\ "{}\ <<\ gerentes[i].getNome()\ <<\ "{}\ -\/\ R\$\ "{}\ <<\ gerentes[i].getSalario()\ <<\ endl;\ }}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00558}00558\ \textcolor{comment}{\ \ \ \ \ \ \ \ somaGer\ +=\ gerentes[i].calcularSalario(gerentes[i].getDiasFaltas());}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00559}00559\ \textcolor{comment}{\ \ \ \ \ \ \ \ soma\ +=\ somaGer;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00560}00560\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00561}00561\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}Soma\ Gerentes:\ "{}\ <<\ somaGer\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00562}00562\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00563}00563\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}****************************\ "{}\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00564}00564\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}Soma\ de\ salarios:\ "{}\ <<\ soma\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00565}00565\ \textcolor{comment}{\ \ \ \ relatorio\ <<\ "{}****************************\ "{}\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00566}00566\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00567}00567\ \textcolor{comment}{\ \ \ \ cout\ \ <<\ "{}Soma\ dos\ salarios\ calculados:\ "{}<<\ soma\ <<\ endl;\ //\ CUSTO\ TOTAL:\ R\$\ 14,802.18}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00568}00568\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00569}00569\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00570}00570\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00571}00571\ \textcolor{comment}{\ \ \ \ FATURAMENTO\ MENSAL:\ 20,957.15}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00572}00572\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00573}00573\ \textcolor{comment}{\ \ \ \ Custo\ ASG(\%):\ 20.20\%}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00574}00574\ \textcolor{comment}{\ \ \ \ Custo\ Vendedor(\%):\ 59.37\%}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00575}00575\ \textcolor{comment}{\ \ \ \ Custo\ GErente(\%):\ 20,42\%}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00576}00576\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00577}00577\ \textcolor{comment}{\ \ \ \ LUCRO\ DA\ EMPRESA:\ 6154.97}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00578}00578\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00579}00579\ \textcolor{comment}{\ \ \ \ SITUAÇÃO:\ Lucro}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00580}00580\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00581}00581\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00582}00582\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00583}00583\ \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00584}00584\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00585}00585\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00586}\mbox{\hyperlink{classEmpresa_ae72390259e15695b3bc73dfb5d651e41}{00586}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEmpresa_ae72390259e15695b3bc73dfb5d651e41}{Empresa::calcularRescisao}}(\textcolor{keywordtype}{string}\ matricula,\ \mbox{\hyperlink{structData}{Data}}\ desligamento)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00587}00587\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\#\#\#\#\#\#\#\#\#\#\ \ \ \ Calculando\ a\ rescisão\ de\ funcionário\ \ \ \ \#\#\#\#\#\#\#\#\#\#"{}}\ <<endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00588}00588\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<asgs.size()\ ;i++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00589}00589\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ asgs[i].getMatricula())\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00590}00590\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Função:\ ASG"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00591}00591\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ asgs[i].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00592}00592\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Salario\ base:\ "{}}\ <<\ asgs[i].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00593}00593\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rescisão\ calculada:\ "{}}\ <<\ asgs[i].calcularRecisao(desligamento)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00594}00594\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00595}00595\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00596}00596\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00597}00597\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<vendedores.size()\ ;i++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00598}00598\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ vendedores[i].getMatricula())\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00599}00599\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Função:\ Vendedor"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00600}00600\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ vendedores[i].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00601}00601\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Salario\ base:\ "{}}\ <<\ vendedores[i].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00602}00602\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rescisão\ calculada:\ "{}}\ <<\ vendedores[i].calcularRecisao(desligamento)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00603}00603\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00604}00604\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00605}00605\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00606}00606\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<gerentes.size()\ ;i++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00607}00607\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ gerentes[i].getMatricula())\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00608}00608\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Função:\ Gerente"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00609}00609\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ gerentes[i].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00610}00610\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Salario\ base:\ "{}}\ <<\ gerentes[i].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00611}00611\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rescisão\ calculada:\ "{}}\ <<\ gerentes[i].calcularRecisao(desligamento)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00612}00612\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00613}00613\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00614}00614\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00615}00615\ \ \ \ \ cout\ \ <<\ \textcolor{stringliteral}{"{}Funcionario\ não\ localizado\ no\ sistema!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00616}00616\ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00617}00617\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00618}\mbox{\hyperlink{classEmpresa_a26d7c72a46c84277ee2e99ed4726dfab}{00618}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEmpresa_a26d7c72a46c84277ee2e99ed4726dfab}{Empresa::demitirFuncionario}}(std::string\ matricula,\ \mbox{\hyperlink{structData}{Data}}\ desligamento)}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00619}00619\ \{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00620}00620\ \ \ \ \ \textcolor{comment}{//\ deve\ chamar\ essa\ funcao\ que\ calcula\ a\ rescisao}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00621}00621\ \ \ \ \ \textcolor{comment}{//\ deve\ produzir\ um\ arquivo\ chamado\ relatorioDemissional.txt\ (seguir\ o\ padrao\ no\ exemplo\ dado)}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00622}00622\ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00623}00623\ \ \ \ \ \textcolor{keywordtype}{int}\ achou\_funcionario\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00624}00624\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<asgs.size()\ ;i++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00625}00625\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ asgs[i].getMatricula())\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00626}00626\ \ \ \ \ \ \ \ \ \ \ \ \ achou\_funcionario\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00627}00627\ \ \ \ \ \ \ \ \ \ \ \ \ fstream\ arquivo;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00628}00628\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./escrita/relatorioDemissional.txt"{}},\ ios::out);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00630}00630\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00631}00631\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00632}00632\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Cargo:\ ASG"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00633}00633\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ asgs[i].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00634}00634\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ asgs[i].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00635}00635\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ asgs[i].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00636}00636\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00637}00637\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ asgs[i].calcularRecisao(desligamento)\ <<\ endl;\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00638}00638\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00639}00639\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00640}00640\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ asgs[i].getDataingresso().ano;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00641}00641\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ asgs[i].getDataingresso().mes;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00642}00642\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ asgs[i].getDataingresso().dia;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00643}00643\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00644}00644\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00645}00645\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00646}00646\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00647}00647\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00648}00648\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IMPRIMINDO\ NO\ TERMINAL}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00649}00649\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00650}00650\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00651}00651\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00652}00652\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ ASG"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00653}00653\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ asgs[i].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00654}00654\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ asgs[i].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00655}00655\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ asgs[i].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00656}00656\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00657}00657\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ asgs[i].calcularRecisao(desligamento)\ <<\ endl;\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00658}00658\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00659}00659\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00660}00660\ \ \ \ \ \ \ \ \ \ \ \ \ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ asgs[i].getDataingresso().ano;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00661}00661\ \ \ \ \ \ \ \ \ \ \ \ \ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ asgs[i].getDataingresso().mes;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00662}00662\ \ \ \ \ \ \ \ \ \ \ \ \ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ asgs[i].getDataingresso().dia;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00663}00663\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00664}00664\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00665}00665\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00666}00666\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00667}00667\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIM\ IMPRESSAO\ NO\ TERMINAL}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00668}00668\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00669}00669\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ removendo\ o\ funcionario}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00670}00670\ \ \ \ \ \ \ \ \ \ \ \ \ asgs.erase(asgs.begin()+i);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00671}00671\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00672}00672\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00673}00673\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/asg.txt"{}},\ ios::out);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00674}00674\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<asgs.size()\ ;j++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00675}00675\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00676}00676\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}ASG\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00677}00677\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00678}00678\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00679}00679\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00680}00680\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getQtdFilhos()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00681}00681\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEstadoCivil()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00682}00682\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00683}00683\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().cidade\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00684}00684\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().cep\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00685}00685\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().bairro\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00686}00686\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().rua\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00687}00687\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().numero\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00688}00688\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00689}00689\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00690}00690\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00691}00691\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00692}00692\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00693}00693\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00694}00694\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00695}00695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getAdcionalInsabubridade()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00696}00696\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDiasFaltas()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00697}00697\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00698}00698\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00699}00699\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00700}00700\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00701}00701\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00702}00702\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00703}00703\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00704}00704\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00705}00705\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00706}00706\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<vendedores.size()\ ;i++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00707}00707\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ vendedores[i].getMatricula())\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00708}00708\ \ \ \ \ \ \ \ \ \ \ \ \ achou\_funcionario\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00709}00709\ \ \ \ \ \ \ \ \ \ \ \ \ fstream\ arquivo;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00710}00710\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./escrita/relatorioDemissional.txt"{}},\ ios::out);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00711}00711\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00712}00712\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00713}00713\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00714}00714\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Vendedor"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00715}00715\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ vendedores[i].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00716}00716\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ vendedores[i].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00717}00717\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ vendedores[i].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00718}00718\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00719}00719\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ vendedores[i].calcularRecisao(desligamento)\ <<\ endl;\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00720}00720\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00721}00721\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00722}00722\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ vendedores[i].getDataingresso().ano;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00723}00723\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ vendedores[i].getDataingresso().mes;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00724}00724\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ vendedores[i].getDataingresso().dia;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00725}00725\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00726}00726\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00727}00727\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00728}00728\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00729}00729\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00730}00730\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IMPRIMINDO\ NO\ TERMINAL}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00731}00731\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00732}00732\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00733}00733\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00734}00734\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ VENDEDOR"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00735}00735\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ vendedores[i].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00736}00736\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ vendedores[i].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00737}00737\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ vendedores[i].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00738}00738\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00739}00739\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ vendedores[i].calcularRecisao(desligamento)\ <<\ endl;\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00740}00740\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00741}00741\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00742}00742\ \ \ \ \ \ \ \ \ \ \ \ \ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ vendedores[i].getDataingresso().ano;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00743}00743\ \ \ \ \ \ \ \ \ \ \ \ \ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ vendedores[i].getDataingresso().mes;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00744}00744\ \ \ \ \ \ \ \ \ \ \ \ \ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ vendedores[i].getDataingresso().dia;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00745}00745\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00746}00746\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00747}00747\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00748}00748\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00749}00749\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIM\ IMPRESSAO\ NO\ TERMINAL}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00750}00750\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00751}00751\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ removendo\ o\ funcionario}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00752}00752\ \ \ \ \ \ \ \ \ \ \ \ \ vendedores.erase(vendedores.begin()+i);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00753}00753\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00754}00754\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00755}00755\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/vendedor.txt"{}},\ ios::out);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00756}00756\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<vendedores.size()\ ;j++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00757}00757\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00758}00758\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}VENDEDOR\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00759}00759\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00760}00760\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00761}00761\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00762}00762\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getQtdFilhos()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00763}00763\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEstadoCivil()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00764}00764\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00765}00765\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().cidade\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00766}00766\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().cep\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00767}00767\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().bairro\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00768}00768\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().rua\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00769}00769\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().numero\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00770}00770\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00771}00771\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00772}00772\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00773}00773\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00774}00774\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00775}00775\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00776}00776\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00777}00777\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getTipoVendedor()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00778}00778\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDiasFaltas()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00779}00779\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00780}00780\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00781}00781\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00782}00782\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00783}00783\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00784}00784\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00785}00785\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00786}00786\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00787}00787\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00788}00788\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<gerentes.size()\ ;i++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00789}00789\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matricula\ ==\ gerentes[i].getMatricula())\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00790}00790\ \ \ \ \ \ \ \ \ \ \ \ \ achou\_funcionario\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00791}00791\ \ \ \ \ \ \ \ \ \ \ \ \ fstream\ arquivo;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00792}00792\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./escrita/relatorioDemissional.txt"{}},\ ios::out);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00793}00793\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00794}00794\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00795}00795\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00796}00796\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Cargo:\ Gerente"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00797}00797\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ gerentes[i].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00798}00798\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ gerentes[i].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00799}00799\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ gerentes[i].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00800}00800\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00801}00801\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ gerentes[i].calcularRecisao(desligamento)\ <<\ endl;\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00802}00802\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00803}00803\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00804}00804\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ gerentes[i].getDataingresso().ano;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00805}00805\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ gerentes[i].getDataingresso().mes;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00806}00806\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ gerentes[i].getDataingresso().dia;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00807}00807\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00808}00808\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00809}00809\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00810}00810\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00811}00811\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00812}00812\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IMPRIMINDO\ NO\ TERMINAL}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00813}00813\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00814}00814\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Relatorio\ Demissional\ \ \ \ \ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00815}00815\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00816}00816\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cargo:\ GERENTE"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00817}00817\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ gerentes[i].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00818}00818\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ gerentes[i].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00819}00819\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Matrícula:\ "{}}\ <<\ gerentes[i].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00820}00820\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00821}00821\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Valor\ da\ rescisão:\ R\$"{}}\ <<\ gerentes[i].calcularRecisao(desligamento)\ <<\ endl;\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00822}00822\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}******************************\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00823}00823\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tempo\ de\ Trabalho:\ "{}};\ \textcolor{comment}{//\ Tempo\ de\ Trabalho:\ 10\ anos,\ 5\ meses\ e\ 12\ dias}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00824}00824\ \ \ \ \ \ \ \ \ \ \ \ \ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ gerentes[i].getDataingresso().ano;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00825}00825\ \ \ \ \ \ \ \ \ \ \ \ \ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ gerentes[i].getDataingresso().mes;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00826}00826\ \ \ \ \ \ \ \ \ \ \ \ \ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ gerentes[i].getDataingresso().dia;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00827}00827\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ anos\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00828}00828\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ meses\ <<\ \textcolor{stringliteral}{"{}\ meses\ e\ "{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00829}00829\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ dias\ <<\ \textcolor{stringliteral}{"{}\ dias\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00830}00830\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00831}00831\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIM\ IMPRESSAO\ NO\ TERMINAL}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00832}00832\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00833}00833\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ removendo\ o\ funcionario}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00834}00834\ \ \ \ \ \ \ \ \ \ \ \ \ gerentes.erase(gerentes.begin()+i);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00835}00835\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00836}00836\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00837}00837\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/gerente.txt"{}},\ ios::out);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00838}00838\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<gerentes.size()\ ;j++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00839}00839\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00840}00840\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}GERENTE\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00841}00841\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00842}00842\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00843}00843\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00844}00844\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getQtdFilhos()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00845}00845\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEstadoCivil()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00846}00846\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00847}00847\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().cidade\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00848}00848\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().cep\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00849}00849\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().bairro\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00850}00850\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().rua\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00851}00851\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().numero\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00852}00852\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00853}00853\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00854}00854\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00855}00855\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00856}00856\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00857}00857\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00858}00858\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00859}00859\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getParticipacaoLucros()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00860}00860\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDiasFaltas()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00861}00861\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00862}00862\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00863}00863\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00864}00864\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00865}00865\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00866}00866\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00867}00867\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00868}00868\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00869}00869\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00870}00870\ \ \ \ \ \textcolor{keywordflow}{if}(achou\_funcionario\ ==\ 0)\ cout\ \ <<\ \textcolor{stringliteral}{"{}Funcionario\ não\ localizado\ no\ sistema!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00871}00871\ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00872}00872\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00873}\mbox{\hyperlink{classEmpresa_a12bf2e81455535cca9ae407f883a2d89}{00873}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEmpresa_a12bf2e81455535cca9ae407f883a2d89}{Empresa::contratarFuncionario}}()}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00874}00874\ \{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00875}00875\ \textcolor{comment}{//\ deve\ ler\ novoFuncionario.txt}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00876}00876\ \textcolor{comment}{//\ primeira\ linha\ eh\ o\ tipo\ de\ funcionario\ (ASG,\ vendedor\ ou\ gerente)}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00877}00877\ \textcolor{comment}{//\ demais\ linhas\ devem\ seguir\ o\ padrao\ dos\ arquivos\ de\ input\ desses\ profissionais}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00878}00878\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00879}00879\ \textcolor{comment}{//\ NAO\ DEVERIA\ REESCREVER\ O\ DETERMINADO\ ARQUIVO\ DE\ LEITURA\ DO\ FUNCIONARIO?}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00880}00880\ \textcolor{comment}{//\ farei\ isso\ porque\ nao\ faz\ sentido\ nao\ fazer...}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00881}00881\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00882}00882\ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00883}00883\ \ \ \ \ \ \ \ \ fstream\ arquivo;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00884}00884\ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/novoFuncionario.txt"{}},\ ios::in);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00885}00885\ \ \ \ \ \ \ \ \ vector<string>\ temp;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00886}00886\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ linha;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00887}00887\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00888}00888\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(getline(arquivo,\ linha))\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00889}00889\ \ \ \ \ \ \ \ \ \ \ \ \ temp.push\_back(linha);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00890}00890\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00891}00891\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00892}\mbox{\hyperlink{classEmpresa_a12bf2e81455535cca9ae407f883a2d89}{00892}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEmpresa_a12bf2e81455535cca9ae407f883a2d89}{Empresa::contratarFuncionario}}()}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00893}00893\ \{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00894}00894\ \textcolor{comment}{//\ deve\ ler\ novoFuncionario.txt}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00895}00895\ \textcolor{comment}{//\ primeira\ linha\ eh\ o\ tipo\ de\ funcionario\ (ASG,\ vendedor\ ou\ gerente)}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00896}00896\ \textcolor{comment}{//\ demais\ linhas\ devem\ seguir\ o\ padrao\ dos\ arquivos\ de\ input\ desses\ profissionais}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00897}00897\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00898}00898\ \textcolor{comment}{//\ NAO\ DEVERIA\ REESCREVER\ O\ DETERMINADO\ ARQUIVO\ DE\ LEITURA\ DO\ FUNCIONARIO?}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00899}00899\ \textcolor{comment}{//\ farei\ isso\ porque\ nao\ faz\ sentido\ nao\ fazer...}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00900}00900\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00901}00901\ \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00902}00902\ \ \ \ \ \ \ \ \ fstream\ arquivo;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00903}00903\ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/novoFuncionario.txt"{}},\ ios::in);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00904}00904\ \ \ \ \ \ \ \ \ vector<string>\ temp;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00905}00905\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ linha;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00892}00892\ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00893}00893\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00894}00894\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IMPRIMINDO\ novoFuncionario\ NO\ TERMINAL}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00895}00895\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ novoFuncionario\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00896}00896\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ it\ :\ temp)}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00897}00897\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00898}00898\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ it\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00899}00899\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00900}00900\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00901}00901\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIM\ IMPRESSAO}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00902}00902\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00903}00903\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(temp[0]\ ==\ \textcolor{stringliteral}{"{}ASG"{}})}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00904}00904\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00905}00905\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classAsg}{Asg}}\ tAsg;}
 \DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00906}00906\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00907}00907\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(getline(arquivo,\ linha))\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00908}00908\ \ \ \ \ \ \ \ \ \ \ \ \ temp.push\_back(linha);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00909}00909\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00910}00910\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00911}00911\ \ \ \ \ \ \ \ \ arquivo.close();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00912}00912\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00913}00913\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IMPRIMINDO\ novoFuncionario\ NO\ TERMINAL}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00914}00914\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ novoFuncionario\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00915}00915\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ it\ :\ temp)}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00916}00916\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00917}00917\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ it\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00918}00918\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00919}00919\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00920}00920\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIM\ IMPRESSAO}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00921}00921\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00922}00922\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(temp[0]\ ==\ \textcolor{stringliteral}{"{}ASG"{}})}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00923}00923\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00924}00924\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classAsg}{Asg}}\ tAsg;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00925}00925\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00926}00926\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a26074576a426b510ff59165b05031f57}{setNome}}(temp[2]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00927}00927\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a63d922c3aaf98fef19aeaf4353b0c718}{setCpf}}(temp[3]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00928}00928\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a5349c468a5bbcf623dd6cf818ccfaf1c}{setQtdFilhos}}(stoi(temp[4]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00929}00929\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a3d4c3e2b7177be168d556e698f401b65}{setEstadoCivil}}(temp[5]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00930}00930\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEndereco}{Endereco}}\ tEnd;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00931}00931\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cidade\ =\ temp[7];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00932}00932\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cep\ =\ temp[8];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00933}00933\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.bairro\ =\ temp[9];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00934}00934\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.rua\ =\ temp[10];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00935}00935\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.numero\ =\ stoi(temp[11]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00936}00936\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a405957d3b7a8f9290c928eb3af6749a0}{setEndereco}}(tEnd);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00937}00937\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ tnasc;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00938}00938\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.ano\ =\ stoi(temp[13]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00939}00939\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.mes\ =\ stoi(temp[14]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00940}00940\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.dia\ =\ stoi(temp[15]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00941}00941\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a2c1ac1810b13a6ff9ff7cb6cba44c2df}{setDataNascimento}}(tnasc);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00942}00942\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}{setMatricula}}(temp[17]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00943}00943\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classFuncionario_a22aca68fbdc2f1dec77ba429eabec4d3}{setSalario}}(stof(temp[18]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00944}00944\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classAsg_ab9c12f5a14c8da0b97035e40d7aacad3}{setAdcionalInsabubridade}}(stof(temp[19]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00945}00945\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classFuncionario_a4c0675b260f197dcb47d52f8b4542e9f}{setDiasFaltas}}(stoi(temp[20]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00946}00946\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ ting;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00947}00947\ \ \ \ \ \ \ \ \ \ \ \ \ ting.ano\ =\ stoi(temp[22]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00948}00948\ \ \ \ \ \ \ \ \ \ \ \ \ ting.mes\ =\ stoi(temp[23]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00949}00949\ \ \ \ \ \ \ \ \ \ \ \ \ ting.dia\ =\ stoi(temp[24]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00950}00950\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classFuncionario_a93767189bf19980f4d2b4bb69c5a3f6e}{setDataingresso}}(ting);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00951}00951\ \ \ \ \ \ \ \ \ \ \ \ \ asgs.push\_back(tAsg);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00952}00952\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00953}00953\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00954}00954\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/asg.txt"{}},\ ios::out);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00955}00955\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<asgs.size()\ ;j++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00956}00956\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00957}00957\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}ASG\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00958}00958\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00959}00959\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00960}00960\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00961}00961\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getQtdFilhos()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00962}00962\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEstadoCivil()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00963}00963\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00964}00964\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().cidade\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00965}00965\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().cep\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00966}00966\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().bairro\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00967}00967\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().rua\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00968}00968\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().numero\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00969}00969\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00970}00970\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00971}00971\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00972}00972\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00973}00973\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00974}00974\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00975}00975\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00976}00976\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getAdcionalInsabubridade()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00977}00977\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDiasFaltas()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00978}00978\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00979}00979\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00980}00980\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00981}00981\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00982}00982\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00983}00983\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00984}00984\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00985}00985\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(temp[0]\ ==\ \textcolor{stringliteral}{"{}VENDEDOR"{}})}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00986}00986\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00987}00987\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVendedor}{Vendedor}}\ tVend;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00988}00988\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00989}00989\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a26074576a426b510ff59165b05031f57}{setNome}}(temp[2]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00990}00990\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a63d922c3aaf98fef19aeaf4353b0c718}{setCpf}}(temp[3]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00991}00991\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a5349c468a5bbcf623dd6cf818ccfaf1c}{setQtdFilhos}}(stoi(temp[4]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00992}00992\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a3d4c3e2b7177be168d556e698f401b65}{setEstadoCivil}}(temp[5]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00993}00993\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEndereco}{Endereco}}\ tEnd;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00994}00994\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cidade\ =\ temp[7];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00995}00995\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cep\ =\ temp[8];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00996}00996\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.bairro\ =\ temp[9];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00997}00997\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.rua\ =\ temp[10];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00998}00998\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.numero\ =\ stoi(temp[11]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00999}00999\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a405957d3b7a8f9290c928eb3af6749a0}{setEndereco}}(tEnd);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01000}01000\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ tnasc;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01001}01001\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.ano\ =\ stoi(temp[13]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01002}01002\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.mes\ =\ stoi(temp[14]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01003}01003\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.dia\ =\ stoi(temp[15]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01004}01004\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a2c1ac1810b13a6ff9ff7cb6cba44c2df}{setDataNascimento}}(tnasc);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01005}01005\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}{setMatricula}}(temp[17]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01006}01006\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classFuncionario_a22aca68fbdc2f1dec77ba429eabec4d3}{setSalario}}(stof(temp[18]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01007}01007\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classVendedor_ad591c4271e9419503e636c89ca9b32d4}{setTipoVendedor}}(temp[19]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01008}01008\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classFuncionario_a4c0675b260f197dcb47d52f8b4542e9f}{setDiasFaltas}}(stoi(temp[20]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01009}01009\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ ting;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01010}01010\ \ \ \ \ \ \ \ \ \ \ \ \ ting.ano\ =\ stoi(temp[22]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01011}01011\ \ \ \ \ \ \ \ \ \ \ \ \ ting.mes\ =\ stoi(temp[23]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01012}01012\ \ \ \ \ \ \ \ \ \ \ \ \ ting.dia\ =\ stoi(temp[24]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01013}01013\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classFuncionario_a93767189bf19980f4d2b4bb69c5a3f6e}{setDataingresso}}(ting);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01014}01014\ \ \ \ \ \ \ \ \ \ \ \ \ vendedores.push\_back(tVend);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01015}01015\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01016}01016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01017}01017\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/vendedor.txt"{}},\ ios::out);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01018}01018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<vendedores.size()\ ;j++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01019}01019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01020}01020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}VENDEDOR\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01021}01021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01022}01022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01023}01023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01024}01024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getQtdFilhos()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01025}01025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEstadoCivil()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01026}01026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01027}01027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().cidade\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01028}01028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().cep\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01029}01029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().bairro\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01030}01030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().rua\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01031}01031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().numero\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01032}01032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01033}01033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01034}01034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01035}01035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01036}01036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01037}01037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01038}01038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01039}01039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getTipoVendedor()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01040}01040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDiasFaltas()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01041}01041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01042}01042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01043}01043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01044}01044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01045}01045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01046}01046\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01047}01047\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01048}01048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(temp[0]\ ==\ \textcolor{stringliteral}{"{}GERENTE"{}})}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01049}01049\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01050}01050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGerente}{Gerente}}\ tGer;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01051}01051\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01052}01052\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a26074576a426b510ff59165b05031f57}{setNome}}(temp[2]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01053}01053\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a63d922c3aaf98fef19aeaf4353b0c718}{setCpf}}(temp[3]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01054}01054\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a5349c468a5bbcf623dd6cf818ccfaf1c}{setQtdFilhos}}(stoi(temp[4]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01055}01055\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a3d4c3e2b7177be168d556e698f401b65}{setEstadoCivil}}(temp[5]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01056}01056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEndereco}{Endereco}}\ tEnd;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01057}01057\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cidade\ =\ temp[7];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01058}01058\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cep\ =\ temp[8];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01059}01059\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.bairro\ =\ temp[9];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01060}01060\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.rua\ =\ temp[10];}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01061}01061\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.numero\ =\ stoi(temp[11]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01062}01062\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a405957d3b7a8f9290c928eb3af6749a0}{setEndereco}}(tEnd);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01063}01063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ tnasc;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01064}01064\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.ano\ =\ stoi(temp[13]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01065}01065\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.mes\ =\ stoi(temp[14]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01066}01066\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.dia\ =\ stoi(temp[15]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01067}01067\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a2c1ac1810b13a6ff9ff7cb6cba44c2df}{setDataNascimento}}(tnasc);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01068}01068\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}{setMatricula}}(temp[17]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01069}01069\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classFuncionario_a22aca68fbdc2f1dec77ba429eabec4d3}{setSalario}}(stof(temp[18]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01070}01070\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}{setParticipacaoLucros}}(stof(temp[19]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01071}01071\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classFuncionario_a4c0675b260f197dcb47d52f8b4542e9f}{setDiasFaltas}}(stoi(temp[20]));}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01072}01072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ ting;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01073}01073\ \ \ \ \ \ \ \ \ \ \ \ \ ting.ano\ =\ stoi(temp[22]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01074}01074\ \ \ \ \ \ \ \ \ \ \ \ \ ting.mes\ =\ stoi(temp[23]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01075}01075\ \ \ \ \ \ \ \ \ \ \ \ \ ting.dia\ =\ stoi(temp[24]);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01076}01076\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classFuncionario_a93767189bf19980f4d2b4bb69c5a3f6e}{setDataingresso}}(ting);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01077}01077\ \ \ \ \ \ \ \ \ \ \ \ \ gerentes.push\_back(tGer);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01078}01078\ }
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01079}01079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01080}01080\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/gerente.txt"{}},\ ios::out);}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01081}01081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<gerentes.size()\ ;j++)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01082}01082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01083}01083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}GERENTE\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01084}01084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01085}01085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getNome()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01086}01086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getCpf()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01087}01087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getQtdFilhos()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01088}01088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEstadoCivil()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01089}01089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01090}01090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().cidade\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01091}01091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().cep\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01092}01092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().bairro\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01093}01093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().rua\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01094}01094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().numero\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01095}01095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01096}01096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01097}01097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01098}01098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01099}01099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01100}01100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getMatricula()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01101}01101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getSalario()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01102}01102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getParticipacaoLucros()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01103}01103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDiasFaltas()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01104}01104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01105}01105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().ano\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01106}01106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().mes\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01107}01107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().dia\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01108}01108\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01109}01109\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01110}01110\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01111}01111\ \ \ \ \ \}\textcolor{keywordflow}{catch}(exception\ \&erro)\{}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01112}01112\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Não\ foi\ possivel\ abrir\ arquivo\ de\ novoFuncionario.txt.\ Erro:\ "{}}\ <<\ erro.what()\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01113}01113\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01114}01114\ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00907}00907\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a26074576a426b510ff59165b05031f57}{setNome}}(temp[2]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00908}00908\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a63d922c3aaf98fef19aeaf4353b0c718}{setCpf}}(temp[3]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00909}00909\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a5349c468a5bbcf623dd6cf818ccfaf1c}{setQtdFilhos}}(stoi(temp[4]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00910}00910\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a3d4c3e2b7177be168d556e698f401b65}{setEstadoCivil}}(temp[5]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00911}00911\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEndereco}{Endereco}}\ tEnd;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00912}00912\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cidade\ =\ temp[7];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00913}00913\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cep\ =\ temp[8];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00914}00914\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.bairro\ =\ temp[9];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00915}00915\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.rua\ =\ temp[10];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00916}00916\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.numero\ =\ stoi(temp[11]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00917}00917\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a405957d3b7a8f9290c928eb3af6749a0}{setEndereco}}(tEnd);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00918}00918\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ tnasc;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00919}00919\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.ano\ =\ stoi(temp[13]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00920}00920\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.mes\ =\ stoi(temp[14]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00921}00921\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.dia\ =\ stoi(temp[15]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00922}00922\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classPessoa_a2c1ac1810b13a6ff9ff7cb6cba44c2df}{setDataNascimento}}(tnasc);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00923}00923\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}{setMatricula}}(temp[17]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00924}00924\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classFuncionario_a22aca68fbdc2f1dec77ba429eabec4d3}{setSalario}}(stof(temp[18]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00925}00925\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classAsg_ab9c12f5a14c8da0b97035e40d7aacad3}{setAdcionalInsabubridade}}(stof(temp[19]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00926}00926\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classFuncionario_a4c0675b260f197dcb47d52f8b4542e9f}{setDiasFaltas}}(stoi(temp[20]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00927}00927\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ ting;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00928}00928\ \ \ \ \ \ \ \ \ \ \ \ \ ting.ano\ =\ stoi(temp[22]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00929}00929\ \ \ \ \ \ \ \ \ \ \ \ \ ting.mes\ =\ stoi(temp[23]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00930}00930\ \ \ \ \ \ \ \ \ \ \ \ \ ting.dia\ =\ stoi(temp[24]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00931}00931\ \ \ \ \ \ \ \ \ \ \ \ \ tAsg.\mbox{\hyperlink{classFuncionario_a93767189bf19980f4d2b4bb69c5a3f6e}{setDataingresso}}(ting);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00932}00932\ \ \ \ \ \ \ \ \ \ \ \ \ asgs.push\_back(tAsg);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00933}00933\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00934}00934\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00935}00935\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/asg.txt"{}},\ ios::out);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00936}00936\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<asgs.size()\ ;j++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00937}00937\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00938}00938\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}ASG\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00939}00939\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00940}00940\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00941}00941\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00942}00942\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getQtdFilhos()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00943}00943\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEstadoCivil()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00944}00944\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00945}00945\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().cidade\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00946}00946\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().cep\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00947}00947\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().bairro\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00948}00948\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().rua\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00949}00949\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getEndereco().numero\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00950}00950\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00951}00951\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00952}00952\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00953}00953\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataNascimento().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00954}00954\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00955}00955\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00956}00956\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00957}00957\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getAdcionalInsabubridade()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00958}00958\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDiasFaltas()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00959}00959\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00960}00960\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00961}00961\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00962}00962\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ asgs[j].getDataingresso().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00963}00963\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00964}00964\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00965}00965\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00966}00966\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(temp[0]\ ==\ \textcolor{stringliteral}{"{}VENDEDOR"{}})}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00967}00967\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00968}00968\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVendedor}{Vendedor}}\ tVend;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00969}00969\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00970}00970\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a26074576a426b510ff59165b05031f57}{setNome}}(temp[2]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00971}00971\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a63d922c3aaf98fef19aeaf4353b0c718}{setCpf}}(temp[3]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00972}00972\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a5349c468a5bbcf623dd6cf818ccfaf1c}{setQtdFilhos}}(stoi(temp[4]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00973}00973\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a3d4c3e2b7177be168d556e698f401b65}{setEstadoCivil}}(temp[5]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00974}00974\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEndereco}{Endereco}}\ tEnd;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00975}00975\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cidade\ =\ temp[7];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00976}00976\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cep\ =\ temp[8];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00977}00977\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.bairro\ =\ temp[9];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00978}00978\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.rua\ =\ temp[10];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00979}00979\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.numero\ =\ stoi(temp[11]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00980}00980\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a405957d3b7a8f9290c928eb3af6749a0}{setEndereco}}(tEnd);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00981}00981\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ tnasc;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00982}00982\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.ano\ =\ stoi(temp[13]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00983}00983\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.mes\ =\ stoi(temp[14]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00984}00984\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.dia\ =\ stoi(temp[15]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00985}00985\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classPessoa_a2c1ac1810b13a6ff9ff7cb6cba44c2df}{setDataNascimento}}(tnasc);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00986}00986\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}{setMatricula}}(temp[17]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00987}00987\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classFuncionario_a22aca68fbdc2f1dec77ba429eabec4d3}{setSalario}}(stof(temp[18]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00988}00988\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classVendedor_ad591c4271e9419503e636c89ca9b32d4}{setTipoVendedor}}(temp[19]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00989}00989\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classFuncionario_a4c0675b260f197dcb47d52f8b4542e9f}{setDiasFaltas}}(stoi(temp[20]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00990}00990\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ ting;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00991}00991\ \ \ \ \ \ \ \ \ \ \ \ \ ting.ano\ =\ stoi(temp[22]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00992}00992\ \ \ \ \ \ \ \ \ \ \ \ \ ting.mes\ =\ stoi(temp[23]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00993}00993\ \ \ \ \ \ \ \ \ \ \ \ \ ting.dia\ =\ stoi(temp[24]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00994}00994\ \ \ \ \ \ \ \ \ \ \ \ \ tVend.\mbox{\hyperlink{classFuncionario_a93767189bf19980f4d2b4bb69c5a3f6e}{setDataingresso}}(ting);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00995}00995\ \ \ \ \ \ \ \ \ \ \ \ \ vendedores.push\_back(tVend);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00996}00996\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00997}00997\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00998}00998\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/vendedor.txt"{}},\ ios::out);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l00999}00999\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<vendedores.size()\ ;j++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01000}01000\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01001}01001\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}VENDEDOR\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01002}01002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01003}01003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01004}01004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01005}01005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getQtdFilhos()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01006}01006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEstadoCivil()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01007}01007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01008}01008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().cidade\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01009}01009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().cep\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01010}01010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().bairro\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01011}01011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().rua\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01012}01012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getEndereco().numero\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01013}01013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01014}01014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01015}01015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01016}01016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataNascimento().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01017}01017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01018}01018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01019}01019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01020}01020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getTipoVendedor()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01021}01021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDiasFaltas()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01022}01022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01023}01023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01024}01024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01025}01025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ vendedores[j].getDataingresso().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01026}01026\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01027}01027\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01028}01028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01029}01029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(temp[0]\ ==\ \textcolor{stringliteral}{"{}GERENTE"{}})}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01030}01030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01031}01031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGerente}{Gerente}}\ tGer;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01032}01032\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01033}01033\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a26074576a426b510ff59165b05031f57}{setNome}}(temp[2]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01034}01034\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a63d922c3aaf98fef19aeaf4353b0c718}{setCpf}}(temp[3]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01035}01035\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a5349c468a5bbcf623dd6cf818ccfaf1c}{setQtdFilhos}}(stoi(temp[4]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01036}01036\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a3d4c3e2b7177be168d556e698f401b65}{setEstadoCivil}}(temp[5]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01037}01037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEndereco}{Endereco}}\ tEnd;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01038}01038\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cidade\ =\ temp[7];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01039}01039\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.cep\ =\ temp[8];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01040}01040\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.bairro\ =\ temp[9];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01041}01041\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.rua\ =\ temp[10];}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01042}01042\ \ \ \ \ \ \ \ \ \ \ \ \ tEnd.numero\ =\ stoi(temp[11]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01043}01043\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a405957d3b7a8f9290c928eb3af6749a0}{setEndereco}}(tEnd);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01044}01044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ tnasc;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01045}01045\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.ano\ =\ stoi(temp[13]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01046}01046\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.mes\ =\ stoi(temp[14]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01047}01047\ \ \ \ \ \ \ \ \ \ \ \ \ tnasc.dia\ =\ stoi(temp[15]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01048}01048\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classPessoa_a2c1ac1810b13a6ff9ff7cb6cba44c2df}{setDataNascimento}}(tnasc);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01049}01049\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}{setMatricula}}(temp[17]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01050}01050\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classFuncionario_a22aca68fbdc2f1dec77ba429eabec4d3}{setSalario}}(stof(temp[18]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01051}01051\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}{setParticipacaoLucros}}(stof(temp[19]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01052}01052\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classFuncionario_a4c0675b260f197dcb47d52f8b4542e9f}{setDiasFaltas}}(stoi(temp[20]));}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01053}01053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ ting;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01054}01054\ \ \ \ \ \ \ \ \ \ \ \ \ ting.ano\ =\ stoi(temp[22]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01055}01055\ \ \ \ \ \ \ \ \ \ \ \ \ ting.mes\ =\ stoi(temp[23]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01056}01056\ \ \ \ \ \ \ \ \ \ \ \ \ ting.dia\ =\ stoi(temp[24]);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01057}01057\ \ \ \ \ \ \ \ \ \ \ \ \ tGer.\mbox{\hyperlink{classFuncionario_a93767189bf19980f4d2b4bb69c5a3f6e}{setDataingresso}}(ting);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01058}01058\ \ \ \ \ \ \ \ \ \ \ \ \ gerentes.push\_back(tGer);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01059}01059\ }
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01060}01060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ arquivo\ de\ input\ dos\ funcionarios\ deve\ ser\ atualizado\ (ASG,\ vendedor\ e\ gerente)}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01061}01061\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.open(\textcolor{stringliteral}{"{}./leitura/gerente.txt"{}},\ ios::out);}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01062}01062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j<gerentes.size()\ ;j++)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01063}01063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01064}01064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}GERENTE\ Nº:\ "{}}\ <<\ j\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01065}01065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ PESSOAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01066}01066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getNome()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01067}01067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getCpf()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01068}01068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getQtdFilhos()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01069}01069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEstadoCivil()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01070}01070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Endereço\ (cidade,\ cep,\ bairro,\ rua\ e\ numero)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01071}01071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().cidade\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01072}01072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().cep\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01073}01073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().bairro\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01074}01074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().rua\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01075}01075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getEndereco().numero\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01076}01076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ nascimento\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01077}01077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01078}01078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01079}01079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataNascimento().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01080}01080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}\#\#\#\#\#\ DADOS\ FUNCIONAIS\ \#\#\#\#\#"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01081}01081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getMatricula()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01082}01082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getSalario()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01083}01083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getParticipacaoLucros()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01084}01084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDiasFaltas()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01085}01085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}*****\ Data\ de\ ingresso\ (ano,\ mes,\ dia)\ ****"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01086}01086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().ano\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01087}01087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().mes\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01088}01088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ gerentes[j].getDataingresso().dia\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01089}01089\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01090}01090\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01091}01091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01092}01092\ \ \ \ \ \}\textcolor{keywordflow}{catch}(exception\ \&erro)\{}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01093}01093\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Não\ foi\ possivel\ abrir\ arquivo\ de\ novoFuncionario.txt.\ Erro:\ "{}}\ <<\ erro.what()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01094}01094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{empresa_8cpp_source_l01095}01095\ \}}
 
 \end{DoxyCode}

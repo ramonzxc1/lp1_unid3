@@ -447,109 +447,90 @@ void Empresa::calculaSalarioFuncionario(string matricula){
 
 
 void Empresa::calculaTodoOsSalarios() {
-  fstream relatorio;
-  // Salvar funcionarios     //arquivo relatorio;
-  relatorio.open("./escrita/relatórioFinanceiro.txt", ios::out);
-  float soma_asg = 0, soma_vendedor = 0, soma_gerente = 0;
-  cout << "######### Relatório Financeiro ########\n\n"<<endl;
-  relatorio<<"######### Relatório Financeiro ########\n\n" << endl;
-
-
-  //------------- ASG ---------------------
-  cout << "Cargo: ASG\n";
-  relatorio<<"Cargo: ASG\n";
-  
-  for (int i = 0; i < asgs.size(); i++) {
-    cout <<asgs[i].getMatricula()<< " - " << asgs[i].getNome() << " - " << asgs[i].getSalario() << endl;
-    relatorio <<asgs[i].getMatricula()<< " - " << asgs[i].getNome() << " - " << asgs[i].getSalario() << endl;
-  
-    soma_asg += asgs[i].getSalario();
-  }
-  cout << "Total ASG: " << soma_asg << endl;
-  relatorio << "Total ASG: " << soma_asg << endl;
-
-  //-------------------- VENDEDOR ----------------------
-  cout << "" << endl;
-  relatorio << ""<<endl;
-  cout << "Cargo: Vendedor\n";
-  relatorio << "Cargo: Vendedor\n";
-
-  for (int i = 0; i < vendedores.size(); i++) {
-    cout << vendedores[i].getMatricula() <<" - "<< vendedores[i].getNome()<< " - R$ " << vendedores[i].getSalario() << endl;
-    relatorio << vendedores[i].getMatricula() <<" - "<< vendedores[i].getNome()<< " - R$ " << vendedores[i].getSalario() << endl;
-     soma_vendedor += vendedores[i].getSalario();
-  }
-
-  
-  cout << "Total Vendedor: " << soma_vendedor << "\n\n";
-  relatorio << "Total Vendedor: "<< soma_vendedor <<"\n\n";
-
-  //-------------------------Gerentes------------
-  cout << "Cargo: Gerente\n";
-  relatorio << "Cargo: Gerente\n";
-  // arquivo relatorio
-  
-  for (int i = 0; i < gerentes.size(); i++) {
-    cout <<gerentes[i].getMatricula() <<" - " << gerentes[i].getNome()<< " - R$" << gerentes[i].getSalario() << endl;
-    relatorio << gerentes[i].getMatricula() <<" - " << gerentes[i].getNome() << " - R$" << gerentes[i].getSalario() << endl;
+    fstream relatorio;
+    // Salvar funcionarios     //arquivo relatorio;
+    relatorio.open("./escrita/relatórioFinanceiro.txt", ios::out);
+    float soma_asg = 0, soma_vendedor = 0, soma_gerente = 0;
+    cout << "######### Relatório Financeiro ########\n\n"<<endl;
+    relatorio<<"######### Relatório Financeiro ########\n\n" << endl;
     
-    soma_gerente += gerentes[i].getSalario();
-  }
-  cout << "Total Gerente: " << soma_gerente << endl;
-  relatorio << "Total Gerente: " << soma_gerente << endl;
+    //------------- ASG ---------------------
+    cout << "Cargo: ASG\n";
+    relatorio<<"Cargo: ASG\n";
+    for (int i = 0; i < asgs.size(); i++) {
+        cout <<asgs[i].getMatricula()<< " - " << asgs[i].getNome() << " - " << asgs[i].getSalario() << endl;
+        relatorio <<asgs[i].getMatricula()<< " - " << asgs[i].getNome() << " - " << asgs[i].getSalario() << endl;
 
-  // --------- total empresa ------------
-  cout << ""<<endl;
-  relatorio << ""<<endl;
-  cout << "CUSTO TOTAL: R$" << (soma_asg + soma_gerente + soma_vendedor) << endl;
-  relatorio << "CUSTO TOTAL: R$" << (soma_asg + soma_gerente + soma_vendedor) << endl;
+        soma_asg += asgs[i].getSalario();
+    }
+    cout << "Total ASG: " << soma_asg << endl;
+    relatorio << "Total ASG: " << soma_asg << endl;
 
-  float faturamento = this->getFaturamentoMensal();
-  //faturamento mensal
-  cout << "" << endl;
-  relatorio << ""<<endl;
-  cout<<"FATURAMENTO MENSAL: "<< faturamento << "\n"<< endl;
-  relatorio<<"FATURAMENTO MENSAL: "<<faturamento<< "\n"<< endl;
-  
-  // calculos
-  float porce_asg, porce_vendedor, porce_gerente, lucro_empresa, custo_total;
+    //-------------------- VENDEDOR ----------------------
+    cout << "" << endl;
+    relatorio << ""<<endl;
+    cout << "Cargo: Vendedor\n";
+    relatorio << "Cargo: Vendedor\n";
+    for (int i = 0; i < vendedores.size(); i++) {
+        cout << vendedores[i].getMatricula() <<" - "<< vendedores[i].getNome()<< " - R$ " << vendedores[i].getSalario() << endl;
+        relatorio << vendedores[i].getMatricula() <<" - "<< vendedores[i].getNome()<< " - R$ " << vendedores[i].getSalario() << endl;
+        soma_vendedor += vendedores[i].getSalario();
+    }
+    cout << "Total Vendedor: " << soma_vendedor << "\n\n";
+    relatorio << "Total Vendedor: "<< soma_vendedor <<"\n\n";
 
-  custo_total = (soma_asg + soma_gerente + soma_vendedor);
+    //-------------------------Gerentes------------
+    cout << "Cargo: Gerente\n";
+    relatorio << "Cargo: Gerente\n";
+    // arquivo relatorio
+    for (int i = 0; i < gerentes.size(); i++) {
+        cout <<gerentes[i].getMatricula() <<" - " << gerentes[i].getNome()<< " - R$" << gerentes[i].getSalario() << endl;
+        relatorio << gerentes[i].getMatricula() <<" - " << gerentes[i].getNome() << " - R$" << gerentes[i].getSalario() << endl;
 
-  porce_asg = (soma_asg*100.0)/custo_total;
-  porce_vendedor = (soma_vendedor*100.0)/custo_total;
-  porce_gerente = (soma_gerente*100.0)/custo_total;
-  
-  lucro_empresa = faturamento - custo_total;
-  // porcentagens custo por categoria
-  cout << "Custo ASG(%): " << porce_asg <<"%"<< endl;
-  cout<<"Custo Vendedor(%): "<<porce_vendedor <<"%"<<endl;
-  cout<<"Custo Gerente(%): " <<porce_gerente<<"%"<<endl;
-   relatorio << "Custo ASG(%): " << porce_asg <<"%"<< endl;
-   relatorio<<"Custo Vendedor(%): "<<porce_vendedor <<"%"<<endl;
-   relatorio<<"Custo Gerente(%): " <<porce_gerente<<"%"<<endl;
+        soma_gerente += gerentes[i].getSalario();
+    }
+    cout << "Total Gerente: " << soma_gerente << endl;
+    relatorio << "Total Gerente: " << soma_gerente << endl;
 
-  cout << "" << endl;
-  relatorio << ""<<endl;
-  cout << "LUCRO DA EMPRESA: "<<lucro_empresa << endl;
-  relatorio << "LUCRO DA EMPRESA: "<<lucro_empresa<< endl;
-
-  cout << "" << endl;
-  relatorio << ""<<endl;
-  if(lucro_empresa>0){
-    cout<<"SITUAÇÂO: lucro"<< endl;
-    relatorio << "SITUAÇÂO: Lucro"<< endl;
-  }else{
-    cout << "SITUAÇÂO: Prejuízo"<< endl;
-    relatorio << "SITUAÇÂO: Prejuízo"<< endl;
-  } 
+    // --------- total empresa ------------
+    cout << ""<<endl;
+    relatorio << ""<<endl;
+    cout << "CUSTO TOTAL: R$" << (soma_asg + soma_gerente + soma_vendedor) << endl;
+    relatorio << "CUSTO TOTAL: R$" << (soma_asg + soma_gerente + soma_vendedor) << endl;
+    float faturamento = this->getFaturamentoMensal();
+    cout << "" << endl;
+    relatorio << ""<<endl;
+    cout<<"FATURAMENTO MENSAL: "<< faturamento << "\n"<< endl;
+    relatorio<<"FATURAMENTO MENSAL: "<<faturamento<< "\n"<< endl;
+    // calculos
+    float porce_asg, porce_vendedor, porce_gerente, lucro_empresa, custo_total;
+    custo_total = (soma_asg + soma_gerente + soma_vendedor);
+    porce_asg = (soma_asg*100.0)/custo_total;
+    porce_vendedor = (soma_vendedor*100.0)/custo_total;
+    porce_gerente = (soma_gerente*100.0)/custo_total;
+    lucro_empresa = faturamento - custo_total;
+    // porcentagens custo por categoria
+    cout << "Custo ASG(%): " << porce_asg <<"%"<< endl;
+    cout<<"Custo Vendedor(%): "<<porce_vendedor <<"%"<<endl;
+    cout<<"Custo Gerente(%): " <<porce_gerente<<"%"<<endl;
+    relatorio << "Custo ASG(%): " << porce_asg <<"%"<< endl;
+    relatorio<<"Custo Vendedor(%): "<<porce_vendedor <<"%"<<endl;
+    relatorio<<"Custo Gerente(%): " <<porce_gerente<<"%"<<endl;
+    cout << "" << endl;
+    relatorio << ""<<endl;
+    cout << "LUCRO DA EMPRESA: "<<lucro_empresa << endl;
+    relatorio << "LUCRO DA EMPRESA: "<<lucro_empresa<< endl;
+    cout << "" << endl;
+    relatorio << ""<<endl;
+    if(lucro_empresa>0){
+        cout<<"SITUAÇÂO: lucro"<< endl;
+        relatorio << "SITUAÇÂO: Lucro"<< endl;
+    }else{
+        cout << "SITUAÇÂO: Prejuízo"<< endl;
+        relatorio << "SITUAÇÂO: Prejuízo"<< endl;
+    } 
 }
-
-
 /*void Empresa::calculaTodoOsSalarios(){
-
-
-
 
     fstream relatorio;
     relatorio.open("./escrita/relatorioFinanceiro.txt", ios::out);
