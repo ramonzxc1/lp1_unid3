@@ -9,15 +9,15 @@ Inheritance diagram for Gerente\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classGerente_a6de5ea06a61305e526f4224f6e38a4a3}\label{classGerente_a6de5ea06a61305e526f4224f6e38a4a3} 
-{\bfseries Gerente} (float participacao\+Lucros)
-\item 
-\Hypertarget{classGerente_a63ce63a22723ff9083dd172302b23367}\label{classGerente_a63ce63a22723ff9083dd172302b23367} 
-float {\bfseries get\+Participacao\+Lucros} ()
-\item 
-\Hypertarget{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}\label{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4} 
-void {\bfseries set\+Participacao\+Lucros} (float participacao\+Lucros)
-\item 
+\Hypertarget{classGerente_a02847f6297c4571cd954005d5dace25b}\label{classGerente_a02847f6297c4571cd954005d5dace25b} 
+{\bfseries Gerente} ()
+\begin{DoxyCompactList}\small\item\em Construtor default/vazio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGerente_a6de5ea06a61305e526f4224f6e38a4a3}{Gerente}} (float participacao\+Lucros)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado que recebe a participação de lucros do gerente. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGerente_a63ce63a22723ff9083dd172302b23367}{get\+Participacao\+Lucros}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o membro da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}{set\+Participacao\+Lucros}} (float participacao\+Lucros)
+\begin{DoxyCompactList}\small\item\em Função que altera a participação de lucros da classe. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classGerente_a6b6c4cde79c813d33b3a7e8dbbab28ee}{calcular\+Salario}} (int dias\+Faltas)
 \begin{DoxyCompactList}\small\item\em Função virtual que calcula o salário da classe \doxylink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classGerente_a64992131f44753a797bc51598e308fce}{calcular\+Recisao}} (\mbox{\hyperlink{structData}{Data}} desligamento)
@@ -74,6 +74,24 @@ void \mbox{\hyperlink{classFuncionario_a4c0675b260f197dcb47d52f8b4542e9f}{set\+D
 \begin{DoxyCompactList}\small\item\em Função que altera a quantidade de dias faltados da classe \doxylink{classPessoa}{Pessoa}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGerente_a6de5ea06a61305e526f4224f6e38a4a3}\label{classGerente_a6de5ea06a61305e526f4224f6e38a4a3} 
+\index{Gerente@{Gerente}!Gerente@{Gerente}}
+\index{Gerente@{Gerente}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{Gerente()}{Gerente()}}
+{\footnotesize\ttfamily Gerente\+::\+Gerente (\begin{DoxyParamCaption}\item[{float}]{participacao\+Lucros }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado que recebe a participação de lucros do gerente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em participacao\+Lucros} & é a variável que inicializará o membro participacao\+Lucros da classe. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classGerente_a64992131f44753a797bc51598e308fce}\label{classGerente_a64992131f44753a797bc51598e308fce} 
 \index{Gerente@{Gerente}!calcularRecisao@{calcularRecisao}}
@@ -119,9 +137,37 @@ Salário da classe \doxylink{classFuncionario}{Funcionario}.
 
 Implements \mbox{\hyperlink{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}{Funcionario}}.
 
+\Hypertarget{classGerente_a63ce63a22723ff9083dd172302b23367}\label{classGerente_a63ce63a22723ff9083dd172302b23367} 
+\index{Gerente@{Gerente}!getParticipacaoLucros@{getParticipacaoLucros}}
+\index{getParticipacaoLucros@{getParticipacaoLucros}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{getParticipacaoLucros()}{getParticipacaoLucros()}}
+{\footnotesize\ttfamily float Gerente\+::get\+Participacao\+Lucros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o membro da classe. 
+
+\begin{DoxyReturn}{Returns}
+Participação de lucros da classe \doxylink{classPessoa}{Pessoa}. 
+\end{DoxyReturn}
+\Hypertarget{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}\label{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4} 
+\index{Gerente@{Gerente}!setParticipacaoLucros@{setParticipacaoLucros}}
+\index{setParticipacaoLucros@{setParticipacaoLucros}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{setParticipacaoLucros()}{setParticipacaoLucros()}}
+{\footnotesize\ttfamily void Gerente\+::set\+Participacao\+Lucros (\begin{DoxyParamCaption}\item[{float}]{participacao\+Lucros }\end{DoxyParamCaption})}
+
+
+
+Função que altera a participação de lucros da classe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em participacao\+Lucros} & é o parâmetro que irá alterar o membro participacao\+Lucros da classe. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-gerente.\+hpp\item 
+\mbox{\hyperlink{gerente_8hpp}{gerente.\+hpp}}\item 
 gerente.\+cpp\end{DoxyCompactItemize}

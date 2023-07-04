@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "acdefgmpsuv",
   1: "adefgpv",
-  2: "efmpuv",
+  2: "efgmpuv",
   3: "cgmpsv"
 };
 

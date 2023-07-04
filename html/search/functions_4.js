@@ -8,7 +8,8 @@ var searchData=
   ['setestadocivil_5',['setEstadoCivil',['../classPessoa.html#a3d4c3e2b7177be168d556e698f401b65',1,'Pessoa']]],
   ['setmatricula_6',['setMatricula',['../classFuncionario.html#ac9ddaedaa41e63ddd1a30f68c992bdfb',1,'Funcionario']]],
   ['setnome_7',['setNome',['../classPessoa.html#a26074576a426b510ff59165b05031f57',1,'Pessoa']]],
-  ['setqtdfilhos_8',['setQtdFilhos',['../classPessoa.html#a5349c468a5bbcf623dd6cf818ccfaf1c',1,'Pessoa']]],
-  ['setsalario_9',['setSalario',['../classFuncionario.html#a22aca68fbdc2f1dec77ba429eabec4d3',1,'Funcionario']]],
-  ['settipovendedor_10',['setTipoVendedor',['../classVendedor.html#ad591c4271e9419503e636c89ca9b32d4',1,'Vendedor']]]
+  ['setparticipacaolucros_8',['setParticipacaoLucros',['../classGerente.html#aa0cdd8949bbc2a3208cb0cedc38e3af4',1,'Gerente']]],
+  ['setqtdfilhos_9',['setQtdFilhos',['../classPessoa.html#a5349c468a5bbcf623dd6cf818ccfaf1c',1,'Pessoa']]],
+  ['setsalario_10',['setSalario',['../classFuncionario.html#a22aca68fbdc2f1dec77ba429eabec4d3',1,'Funcionario']]],
+  ['settipovendedor_11',['setTipoVendedor',['../classVendedor.html#ad591c4271e9419503e636c89ca9b32d4',1,'Vendedor']]]
 ];
