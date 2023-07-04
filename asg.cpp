@@ -12,7 +12,7 @@ float Asg::getAdcionalInsabubridade(){
     return this->adicionalInsalubridade;
 }
 
-void Asg::setAdcionalInsabubridade(float){
+void Asg::setAdcionalInsabubridade(float adicionalInsalubridade){
     this->adicionalInsalubridade = adicionalInsalubridade;
 }
 

@@ -11,10 +11,6 @@ Empresa::Empresa(string nomeEmpresa, float faturamentoMensal, string cnpj){
     this->cnpj = cnpj;
 }
 
-/**
- * @file empresa.cpp
- * @brief test
-*/
 float Empresa::getFaturamentoMensal(){
     return this->faturamentoMensal; 
 }

@@ -44,17 +44,17 @@ public:
      */
     Data getDataingresso();
     /**
-     * @brief Função que altera o salário da classe Pessoa.
+     * @brief Função que altera o salário da classe Funcionario.
      * @param salario é o parâmetro que irá alterar o membro salario da classe.
      */
     void setSalario(float salario);
     /**
-     * @brief Função que altera a matrícula da classe Pessoa.
+     * @brief Função que altera a matrícula da classe Funcionario.
      * @param matricula é o parâmetro que irá alterar o membro matricula da classe.
      */
     void setMatricula(std::string matricula);
     /**
-     * @brief Função que altera a data de ingresso da classe Pessoa.
+     * @brief Função que altera a data de ingresso da classe Funcionario.
      * @param ingressoEmpresa é o parâmetro que irá alterar o membro ingressoEmpresa da classe.
      */
     void setDataingresso(Data ingressoEmpresa);
@@ -64,7 +64,7 @@ public:
      */
     int getDiasFaltas();
     /**
-     * @brief Função que altera a quantidade de dias faltados da classe Pessoa.
+     * @brief Função que altera a quantidade de dias faltados da classe Funcionario.
      * @param diasFaltas é o parâmetro que irá alterar o membro diasFaltas da classe.
      */
     void setDiasFaltas(int diasFaltas);

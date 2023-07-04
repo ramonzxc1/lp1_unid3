@@ -26,7 +26,7 @@ public:
     Gerente(float participacaoLucros);
     /**
      * @brief Função que retorna o membro da classe.
-     * @return Participação de lucros da classe Pessoa.
+     * @return Participação de lucros da classe Gerente.
     */
     float getParticipacaoLucros();
     /**
