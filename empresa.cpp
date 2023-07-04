@@ -3,6 +3,11 @@
 #include "empresa.hpp"
 using namespace std;
 
+/**
+ * @file empresa.cpp
+ * @brief Arquivo que contém o código-fonte de empresa.
+*/
+
 Empresa::Empresa() {}
 
 Empresa::Empresa(string nomeEmpresa, float faturamentoMensal, string cnpj){

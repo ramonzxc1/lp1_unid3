@@ -3,6 +3,11 @@
 
 using namespace std;
 
+/**
+ * @file funcionario.cpp
+ * @brief Arquivo que contém o código-fonte de funcionario.
+*/
+
 float Funcionario::getSalario(){ 
     return this->salario; 
 }

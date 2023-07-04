@@ -3,6 +3,11 @@
 
 using namespace std;
 
+/**
+ * @file pessoa.cpp
+ * @brief Arquivo que contém o código-fonte de pessoa.
+*/
+
 Pessoa::Pessoa(){}
 
 Pessoa::Pessoa(string nome, string cpf, Data dataNascimento, Endereco enderecoPessoal, string estadoCivil, int qtdFilhos){

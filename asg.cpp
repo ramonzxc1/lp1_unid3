@@ -2,6 +2,11 @@
 #include "asg.hpp"
 using namespace std;
 
+/**
+ * @file asg.cpp
+ * @brief Arquivo que contém o código-fonte de asg.
+*/
+
 Asg::Asg(){}
 
 Asg::Asg(float adicionalInsalubridade){

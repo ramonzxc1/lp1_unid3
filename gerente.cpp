@@ -2,6 +2,11 @@
 #include "gerente.hpp"
 using namespace std;
 
+/**
+ * @file gerente.cpp
+ * @brief Arquivo que contém o código-fonte de gerente.
+*/
+
 Gerente::Gerente(){
 
 };  

@@ -2,6 +2,11 @@
 #include "vendedor.hpp"
 using namespace std;
 
+/**
+ * @file vendedor.cpp
+ * @brief Arquivo que contém o código-fonte de vendedor.
+*/
+
 Vendedor::Vendedor(){}
 
 Vendedor::Vendedor(char tipoVendedor){ 
