@@ -1,0 +1,37 @@
+\doxysection{pessoa.\+hpp}
+\hypertarget{pessoa_8hpp_source}{}\label{pessoa_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PESSOA\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PESSOA\_HPP}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}util.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPessoa}{Pessoa}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ std::string\ nome;}
+\DoxyCodeLine{00009\ \ \ std::string\ cpf;}
+\DoxyCodeLine{00010\ \ \ \mbox{\hyperlink{structData}{Data}}\ dataNascimento;}
+\DoxyCodeLine{00011\ \ \ \mbox{\hyperlink{structEndereco}{Endereco}}\ enderecoPessoal;}
+\DoxyCodeLine{00012\ \ \ std::string\ estadoCivil;}
+\DoxyCodeLine{00013\ \ \ \textcolor{keywordtype}{int}\ qtdFilhos;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \mbox{\hyperlink{classPessoa}{Pessoa}}();}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classPessoa}{Pessoa}}(std::string\ nome,\ std::string\ cpf,\ \mbox{\hyperlink{structData}{Data}}\ dataNascimento,\ \mbox{\hyperlink{structEndereco}{Endereco}}\ enderecoPessoal,\ std::string\ estadoCivil,\ \textcolor{keywordtype}{int}\ qtdFilhos);}
+\DoxyCodeLine{00018\ \ \ std::string\ getNome();}
+\DoxyCodeLine{00019\ \ \ std::string\ getCpf();}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{structData}{Data}}\ getDataNascimento();}
+\DoxyCodeLine{00021\ \ \ \mbox{\hyperlink{structEndereco}{Endereco}}\ getEndereco();}
+\DoxyCodeLine{00022\ \ \ std::string\ getEstadoCivil();}
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{int}\ getQtdFilhos();}
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{void}\ setNome(std::string\ nome);}
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{void}\ setCpf(std::string\ cpf);}
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{void}\ setDataNascimento(\mbox{\hyperlink{structData}{Data}}\ dataNascimento);}
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{void}\ setEndereco(\mbox{\hyperlink{structEndereco}{Endereco}}\ enderecoPessoal);}
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{void}\ setEstadoCivil(std::string\ estadoCivil);}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{void}\ setQtdFilhos(\textcolor{keywordtype}{int}\ qtdFilhos);}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

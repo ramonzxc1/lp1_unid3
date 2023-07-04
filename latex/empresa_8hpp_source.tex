@@ -1,0 +1,56 @@
+\doxysection{empresa.\+hpp}
+\hypertarget{empresa_8hpp_source}{}\label{empresa_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EMPRESA\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EMPRESA\_HPP}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}asg.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}vendedor.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}gerente.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEmpresa}{Empresa}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \textcolor{keywordtype}{float}\ faturamentoMensal;}
+\DoxyCodeLine{00012\ \ \ std::string\ nomeEmpresa;}
+\DoxyCodeLine{00013\ \ \ std::string\ cnpj;}
+\DoxyCodeLine{00014\ \ \ \mbox{\hyperlink{classPessoa}{Pessoa}}\ *Dono\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPessoa}{Pessoa}}();}
+\DoxyCodeLine{00015\ \ \ std::vector<Asg>\ asgs;}
+\DoxyCodeLine{00016\ \ \ std::vector<Vendedor>\ vendedores;}
+\DoxyCodeLine{00017\ \ \ std::vector<Gerente>\ gerentes;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{classEmpresa}{Empresa}}();}
+\DoxyCodeLine{00021\ \ \ \mbox{\hyperlink{classEmpresa}{Empresa}}(std::string\ nomeEmpresa,\ \ \textcolor{keywordtype}{float}\ faturamentoMensal,\ std::string\ cnpj);}
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{float}\ getFaturamentoMensal();}
+\DoxyCodeLine{00023\ \ \ std::string\ getNomeEmpresa();}
+\DoxyCodeLine{00024\ \ \ std::string\ getCnpj();}
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{classPessoa}{Pessoa}}\ *getDono();}
+\DoxyCodeLine{00026\ \ \ std::vector<Vendedor>\ getVendedores();}
+\DoxyCodeLine{00027\ \ \ std::vector<Asg>\ getAsg();}
+\DoxyCodeLine{00028\ \ \ std::vector<Gerente>\ getGerente();}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{void}\ setFaturamentoMensal(\textcolor{keywordtype}{float}\ faturamentoMensal);}
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{void}\ setNomeEmpresa(std::string\ nomeEmpresa);}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{void}\ setCnpj(std::string\ cnpj);}
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{void}\ carregaFuncoes();}
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{void}\ carregarEmpresa();}
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{void}\ carregarAsg();}
+\DoxyCodeLine{00035\ \ \ \textcolor{keywordtype}{void}\ carregarVendedor();}
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{void}\ carregarGerente();}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{void}\ carregaDono();}
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{void}\ imprimeAsgs();}
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{void}\ imprimeVendedores();}
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{void}\ imprimeGerentes();}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ imprimeDono();}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{void}\ buscaFuncionario(std::string\ matricula);}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{void}\ calculaSalarioFuncionario(std::string\ matricula);}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{void}\ calculaTodoOsSalarios();}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{void}\ calcularRescisao(std::string\ matricula,\ \mbox{\hyperlink{structData}{Data}}\ desligamento);}
+\DoxyCodeLine{00046\ \ \ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ demitirFuncionario(std::string\ matricula,\ \mbox{\hyperlink{structData}{Data}}\ desligamento);}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{void}\ contratarFuncionario();}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,26 @@
+\doxysection{vendedor.\+hpp}
+\hypertarget{vendedor_8hpp_source}{}\label{vendedor_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VENDEDOR\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VENDEDOR\_HPP}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}pessoa.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}funcionario.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVendedor}{Vendedor}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPessoa}{Pessoa}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classFuncionario}{Funcionario}}\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ std::string\ tipoVendedor;\ \textcolor{comment}{//\ A,\ B,\ C}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classVendedor}{Vendedor}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classVendedor}{Vendedor}}(\textcolor{keywordtype}{char}\ tipoVendedor);}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ getTipoVendedor();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ setTipoVendedor(std::string\ tipoVendedor);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ calcularSalario(\textcolor{keywordtype}{int}\ diasFaltas);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ calcularRecisao(\mbox{\hyperlink{structData}{Data}}\ desligamento);}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

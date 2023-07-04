@@ -1,0 +1,31 @@
+\doxysection{funcionario.\+hpp}
+\hypertarget{funcionario_8hpp_source}{}\label{funcionario_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FUNCIONARIO\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FUNCIONARIO\_HPP}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}util.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFuncionario}{Funcionario}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ salario;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ diasFaltas;}
+\DoxyCodeLine{00010\ \ \ \ \ std::string\ matricula;}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ ingressoEmpresa;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ calcularSalario(\textcolor{keywordtype}{int}\ diasFaltas)\ =\ 0;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ calcularRecisao(\mbox{\hyperlink{structData}{Data}}\ desligamento)\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ getSalario();}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ getMatricula();}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ getDataingresso();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ setSalario(\textcolor{keywordtype}{float}\ salario);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ setMatricula(std::string\ matricula);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ setDataingresso(\mbox{\hyperlink{structData}{Data}}\ ingressoEmpresa);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ getDiasFaltas();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ setDiasFaltas(\textcolor{keywordtype}{int}\ diasFaltas);}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

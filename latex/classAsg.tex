@@ -1,0 +1,101 @@
+\doxysection{Asg Class Reference}
+\hypertarget{classAsg}{}\label{classAsg}\index{Asg@{Asg}}
+Inheritance diagram for Asg\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAsg}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classAsg_ab85f530a0a62828281ac9246cde4c288}\label{classAsg_ab85f530a0a62828281ac9246cde4c288} 
+{\bfseries Asg} (float adicional\+Insalubridade)
+\item 
+\Hypertarget{classAsg_a2c3a9fb96987cd171eeac778ebe7dec9}\label{classAsg_a2c3a9fb96987cd171eeac778ebe7dec9} 
+float {\bfseries get\+Adcional\+Insabubridade} ()
+\item 
+\Hypertarget{classAsg_a8214bd83f988539a727e07a852a2c215}\label{classAsg_a8214bd83f988539a727e07a852a2c215} 
+void {\bfseries set\+Adcional\+Insabubridade} (float)
+\item 
+float \mbox{\hyperlink{classAsg_a24163deceebb0361b77a713b905d2349}{calcular\+Salario}} (int dias\+Faltas)
+\item 
+float \mbox{\hyperlink{classAsg_a0ae5473de95f2d39ae5278537574a641}{calcular\+Recisao}} (\mbox{\hyperlink{structData}{Data}} desligamento)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPessoa}{Pessoa}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Pessoa} (std\+::string nome, std\+::string cpf, \mbox{\hyperlink{structData}{Data}} data\+Nascimento, \mbox{\hyperlink{structEndereco}{Endereco}} endereco\+Pessoal, std\+::string estado\+Civil, int qtd\+Filhos)
+\item 
+std\+::string {\bfseries get\+Nome} ()
+\item 
+std\+::string {\bfseries get\+Cpf} ()
+\item 
+\mbox{\hyperlink{structData}{Data}} {\bfseries get\+Data\+Nascimento} ()
+\item 
+\mbox{\hyperlink{structEndereco}{Endereco}} {\bfseries get\+Endereco} ()
+\item 
+std\+::string {\bfseries get\+Estado\+Civil} ()
+\item 
+int {\bfseries get\+Qtd\+Filhos} ()
+\item 
+void {\bfseries set\+Nome} (std\+::string nome)
+\item 
+void {\bfseries set\+Cpf} (std\+::string cpf)
+\item 
+void {\bfseries set\+Data\+Nascimento} (\mbox{\hyperlink{structData}{Data}} data\+Nascimento)
+\item 
+void {\bfseries set\+Endereco} (\mbox{\hyperlink{structEndereco}{Endereco}} endereco\+Pessoal)
+\item 
+void {\bfseries set\+Estado\+Civil} (std\+::string estado\+Civil)
+\item 
+void {\bfseries set\+Qtd\+Filhos} (int qtd\+Filhos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFuncionario}{Funcionario}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries get\+Salario} ()
+\item 
+std\+::string {\bfseries get\+Matricula} ()
+\item 
+\mbox{\hyperlink{structData}{Data}} {\bfseries get\+Dataingresso} ()
+\item 
+void {\bfseries set\+Salario} (float salario)
+\item 
+void {\bfseries set\+Matricula} (std\+::string matricula)
+\item 
+void {\bfseries set\+Dataingresso} (\mbox{\hyperlink{structData}{Data}} ingresso\+Empresa)
+\item 
+int {\bfseries get\+Dias\+Faltas} ()
+\item 
+void {\bfseries set\+Dias\+Faltas} (int dias\+Faltas)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAsg_a0ae5473de95f2d39ae5278537574a641}\label{classAsg_a0ae5473de95f2d39ae5278537574a641} 
+\index{Asg@{Asg}!calcularRecisao@{calcularRecisao}}
+\index{calcularRecisao@{calcularRecisao}!Asg@{Asg}}
+\doxysubsubsection{\texorpdfstring{calcularRecisao()}{calcularRecisao()}}
+{\footnotesize\ttfamily float Asg\+::calcular\+Recisao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}}}]{desligamento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classFuncionario}{Funcionario}}.
+
+\Hypertarget{classAsg_a24163deceebb0361b77a713b905d2349}\label{classAsg_a24163deceebb0361b77a713b905d2349} 
+\index{Asg@{Asg}!calcularSalario@{calcularSalario}}
+\index{calcularSalario@{calcularSalario}!Asg@{Asg}}
+\doxysubsubsection{\texorpdfstring{calcularSalario()}{calcularSalario()}}
+{\footnotesize\ttfamily float Asg\+::calcular\+Salario (\begin{DoxyParamCaption}\item[{int}]{dias\+Faltas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classFuncionario}{Funcionario}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+asg.\+hpp\item 
+asg.\+cpp\end{DoxyCompactItemize}

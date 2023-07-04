@@ -1,0 +1,101 @@
+\doxysection{Gerente Class Reference}
+\hypertarget{classGerente}{}\label{classGerente}\index{Gerente@{Gerente}}
+Inheritance diagram for Gerente\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGerente}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGerente_a6de5ea06a61305e526f4224f6e38a4a3}\label{classGerente_a6de5ea06a61305e526f4224f6e38a4a3} 
+{\bfseries Gerente} (float participacao\+Lucros)
+\item 
+\Hypertarget{classGerente_a63ce63a22723ff9083dd172302b23367}\label{classGerente_a63ce63a22723ff9083dd172302b23367} 
+float {\bfseries get\+Participacao\+Lucros} ()
+\item 
+\Hypertarget{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}\label{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4} 
+void {\bfseries set\+Participacao\+Lucros} (float participacao\+Lucros)
+\item 
+float \mbox{\hyperlink{classGerente_a6b6c4cde79c813d33b3a7e8dbbab28ee}{calcular\+Salario}} (int dias\+Faltas)
+\item 
+float \mbox{\hyperlink{classGerente_a64992131f44753a797bc51598e308fce}{calcular\+Recisao}} (\mbox{\hyperlink{structData}{Data}} desligamento)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPessoa}{Pessoa}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Pessoa} (std\+::string nome, std\+::string cpf, \mbox{\hyperlink{structData}{Data}} data\+Nascimento, \mbox{\hyperlink{structEndereco}{Endereco}} endereco\+Pessoal, std\+::string estado\+Civil, int qtd\+Filhos)
+\item 
+std\+::string {\bfseries get\+Nome} ()
+\item 
+std\+::string {\bfseries get\+Cpf} ()
+\item 
+\mbox{\hyperlink{structData}{Data}} {\bfseries get\+Data\+Nascimento} ()
+\item 
+\mbox{\hyperlink{structEndereco}{Endereco}} {\bfseries get\+Endereco} ()
+\item 
+std\+::string {\bfseries get\+Estado\+Civil} ()
+\item 
+int {\bfseries get\+Qtd\+Filhos} ()
+\item 
+void {\bfseries set\+Nome} (std\+::string nome)
+\item 
+void {\bfseries set\+Cpf} (std\+::string cpf)
+\item 
+void {\bfseries set\+Data\+Nascimento} (\mbox{\hyperlink{structData}{Data}} data\+Nascimento)
+\item 
+void {\bfseries set\+Endereco} (\mbox{\hyperlink{structEndereco}{Endereco}} endereco\+Pessoal)
+\item 
+void {\bfseries set\+Estado\+Civil} (std\+::string estado\+Civil)
+\item 
+void {\bfseries set\+Qtd\+Filhos} (int qtd\+Filhos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFuncionario}{Funcionario}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries get\+Salario} ()
+\item 
+std\+::string {\bfseries get\+Matricula} ()
+\item 
+\mbox{\hyperlink{structData}{Data}} {\bfseries get\+Dataingresso} ()
+\item 
+void {\bfseries set\+Salario} (float salario)
+\item 
+void {\bfseries set\+Matricula} (std\+::string matricula)
+\item 
+void {\bfseries set\+Dataingresso} (\mbox{\hyperlink{structData}{Data}} ingresso\+Empresa)
+\item 
+int {\bfseries get\+Dias\+Faltas} ()
+\item 
+void {\bfseries set\+Dias\+Faltas} (int dias\+Faltas)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGerente_a64992131f44753a797bc51598e308fce}\label{classGerente_a64992131f44753a797bc51598e308fce} 
+\index{Gerente@{Gerente}!calcularRecisao@{calcularRecisao}}
+\index{calcularRecisao@{calcularRecisao}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{calcularRecisao()}{calcularRecisao()}}
+{\footnotesize\ttfamily float Gerente\+::calcular\+Recisao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}}}]{desligamento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classFuncionario}{Funcionario}}.
+
+\Hypertarget{classGerente_a6b6c4cde79c813d33b3a7e8dbbab28ee}\label{classGerente_a6b6c4cde79c813d33b3a7e8dbbab28ee} 
+\index{Gerente@{Gerente}!calcularSalario@{calcularSalario}}
+\index{calcularSalario@{calcularSalario}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{calcularSalario()}{calcularSalario()}}
+{\footnotesize\ttfamily float Gerente\+::calcular\+Salario (\begin{DoxyParamCaption}\item[{int}]{dias\+Faltas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classFuncionario}{Funcionario}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gerente.\+hpp\item 
+gerente.\+cpp\end{DoxyCompactItemize}
