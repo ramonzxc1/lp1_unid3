@@ -5,6 +5,7 @@
 /**
  * @file main.cpp
  * @brief Arquivo principal do projeto empresa da unidade 3 de Linguagem de Programação 1.
+ * @details asdasddasasdadsads
  * @author Carlos, Jéssica e Ramon
  * @date 03/07/2023
 */

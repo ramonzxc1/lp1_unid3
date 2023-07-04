@@ -1,0 +1,48 @@
+\doxysection{vendedor.\+cpp}
+\hypertarget{vendedor_8cpp_source}{}\label{vendedor_8cpp_source}\mbox{\hyperlink{vendedor_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vendedor_8hpp}{vendedor.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00003}00003\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00010}\mbox{\hyperlink{classVendedor_abc9586a0933dc3719e8b7fcfe9db0563}{00010}}\ \mbox{\hyperlink{classVendedor_abc9586a0933dc3719e8b7fcfe9db0563}{Vendedor::Vendedor}}()\{\}}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00012}\mbox{\hyperlink{classVendedor_a7dcf93d25da34a6aa4367b1250e02582}{00012}}\ \mbox{\hyperlink{classVendedor_abc9586a0933dc3719e8b7fcfe9db0563}{Vendedor::Vendedor}}(\textcolor{keywordtype}{char}\ tipoVendedor)\{\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00013}00013\ \ \ \ \ this-\/>tipoVendedor\ =\ tipoVendedor;}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00016}\mbox{\hyperlink{classVendedor_a49d65379895f9a2518b197e2d0c0d49c}{00016}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVendedor_a49d65379895f9a2518b197e2d0c0d49c}{Vendedor::getTipoVendedor}}()\{\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>tipoVendedor;\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00020}\mbox{\hyperlink{classVendedor_ad591c4271e9419503e636c89ca9b32d4}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVendedor_ad591c4271e9419503e636c89ca9b32d4}{Vendedor::setTipoVendedor}}(\textcolor{keywordtype}{string}\ tipoVendedor)\{\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00021}00021\ \ \ \ \ this-\/>tipoVendedor\ =\ tipoVendedor;\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00024}\mbox{\hyperlink{classVendedor_a474ea9d58a882cfff30082b9359de5b9}{00024}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classVendedor_a474ea9d58a882cfff30082b9359de5b9}{Vendedor::calcularSalario}}(\textcolor{keywordtype}{int}\ diasFaltas)\{}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{float}\ precoDia\ =\ \mbox{\hyperlink{classFuncionario_a98d5aef3daa877847e45e6ff34c7dcf8}{getSalario}}()/30;\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{float}\ desconto\ =\ precoDia\ *\ diasFaltas;}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{float}\ salarioMes\ =\ (\mbox{\hyperlink{classFuncionario_a98d5aef3daa877847e45e6ff34c7dcf8}{getSalario}}()\ -\/\ desconto);\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>tipoVendedor\ ==\ \textcolor{stringliteral}{"{}A"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ salarioMes\ *=\ (1\ +\ 0.25);}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>tipoVendedor\ ==\ \textcolor{stringliteral}{"{}B"{}})\{}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ salarioMes\ *=\ (1\ +\ 0.10);}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ salarioMes\ *=\ (1\ +\ 0.05);}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{return}\ salarioMes;}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00041}\mbox{\hyperlink{classVendedor_a525d76e72158608c9f2bd45478f1adb3}{00041}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classVendedor_a525d76e72158608c9f2bd45478f1adb3}{Vendedor::calcularRecisao}}(\mbox{\hyperlink{structData}{Data}}\ desligamento)\{}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{float}\ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ \mbox{\hyperlink{classFuncionario_a177dc35b03e4b5c6153f1851b135ca03}{getDataingresso}}().ano;}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{float}\ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ \mbox{\hyperlink{classFuncionario_a177dc35b03e4b5c6153f1851b135ca03}{getDataingresso}}().mes;}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{float}\ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ \mbox{\hyperlink{classFuncionario_a177dc35b03e4b5c6153f1851b135ca03}{getDataingresso}}().dia;}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{float}\ totalAnos\ =\ anos\ +\ (meses\ /\ 12)\ +\ (dias\ /\ 365);}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{float}\ valorRecisao\ =\ totalAnos\ *\ \mbox{\hyperlink{classFuncionario_a98d5aef3daa877847e45e6ff34c7dcf8}{getSalario}}();}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{return}\ valorRecisao;}
+\DoxyCodeLine{\Hypertarget{vendedor_8cpp_source_l00048}00048\ \}}
+
+\end{DoxyCode}

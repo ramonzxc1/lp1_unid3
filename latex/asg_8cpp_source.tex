@@ -1,0 +1,39 @@
+\doxysection{asg.\+cpp}
+\hypertarget{asg_8cpp_source}{}\label{asg_8cpp_source}\mbox{\hyperlink{asg_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{asg_8hpp}{asg.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00003}00003\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00010}\mbox{\hyperlink{classAsg_a09b1b8572f9fcdea00f973e10b7d8202}{00010}}\ \mbox{\hyperlink{classAsg_a09b1b8572f9fcdea00f973e10b7d8202}{Asg::Asg}}()\{\}}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00012}\mbox{\hyperlink{classAsg_ab85f530a0a62828281ac9246cde4c288}{00012}}\ \mbox{\hyperlink{classAsg_a09b1b8572f9fcdea00f973e10b7d8202}{Asg::Asg}}(\textcolor{keywordtype}{float}\ adicionalInsalubridade)\{}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00013}00013\ \ \ \ \ this-\/>adicionalInsalubridade\ =\ adicionalInsalubridade;}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00016}\mbox{\hyperlink{classAsg_a2c3a9fb96987cd171eeac778ebe7dec9}{00016}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classAsg_a2c3a9fb96987cd171eeac778ebe7dec9}{Asg::getAdcionalInsabubridade}}()\{}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>adicionalInsalubridade;}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00020}\mbox{\hyperlink{classAsg_ab9c12f5a14c8da0b97035e40d7aacad3}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAsg_ab9c12f5a14c8da0b97035e40d7aacad3}{Asg::setAdcionalInsabubridade}}(\textcolor{keywordtype}{float}\ adicionalInsalubridade)\{}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00021}00021\ \ \ \ \ this-\/>adicionalInsalubridade\ =\ adicionalInsalubridade;}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00024}\mbox{\hyperlink{classAsg_a24163deceebb0361b77a713b905d2349}{00024}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classAsg_a24163deceebb0361b77a713b905d2349}{Asg::calcularSalario}}(\textcolor{keywordtype}{int}\ diasFaltas)\{}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{float}\ precoDia\ =\ \mbox{\hyperlink{classFuncionario_a98d5aef3daa877847e45e6ff34c7dcf8}{getSalario}}()/30;\ }
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{float}\ desconto\ =\ precoDia\ *\ diasFaltas;}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{float}\ salarioMes\ =\ (\mbox{\hyperlink{classFuncionario_a98d5aef3daa877847e45e6ff34c7dcf8}{getSalario}}()\ -\/\ desconto)\ *\ (1\ +\ adicionalInsalubridade);\ }
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ salarioMes;}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00031}\mbox{\hyperlink{classAsg_a0ae5473de95f2d39ae5278537574a641}{00031}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classAsg_a0ae5473de95f2d39ae5278537574a641}{Asg::calcularRecisao}}(\mbox{\hyperlink{structData}{Data}}\ desligamento)\{}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{float}\ anos\ =\ (desligamento.ano\ -\/\ 1)\ -\/\ \mbox{\hyperlink{classFuncionario_a177dc35b03e4b5c6153f1851b135ca03}{getDataingresso}}().ano;\ }
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{float}\ meses\ =\ (desligamento.mes\ +\ 11)\ -\/\ \mbox{\hyperlink{classFuncionario_a177dc35b03e4b5c6153f1851b135ca03}{getDataingresso}}().mes;}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{float}\ dias\ =\ (desligamento.dia\ +\ 30)\ -\/\ \mbox{\hyperlink{classFuncionario_a177dc35b03e4b5c6153f1851b135ca03}{getDataingresso}}().dia;}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{float}\ totalAnos\ =\ anos\ +\ (meses\ /\ 12)\ +\ (dias\ /\ 365);}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{float}\ valorRecisao\ =\ totalAnos\ *\ \mbox{\hyperlink{classFuncionario_a98d5aef3daa877847e45e6ff34c7dcf8}{getSalario}}();}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ valorRecisao;}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{asg_8cpp_source_l00039}00039\ }
+
+\end{DoxyCode}
