@@ -9,19 +9,19 @@ Inheritance diagram for Vendedor\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classVendedor_a7dcf93d25da34a6aa4367b1250e02582}\label{classVendedor_a7dcf93d25da34a6aa4367b1250e02582} 
-{\bfseries Vendedor} (char tipo\+Vendedor)
-\item 
-\Hypertarget{classVendedor_a49d65379895f9a2518b197e2d0c0d49c}\label{classVendedor_a49d65379895f9a2518b197e2d0c0d49c} 
-std\+::string {\bfseries get\+Tipo\+Vendedor} ()
-\item 
-\Hypertarget{classVendedor_ad591c4271e9419503e636c89ca9b32d4}\label{classVendedor_ad591c4271e9419503e636c89ca9b32d4} 
-void {\bfseries set\+Tipo\+Vendedor} (std\+::string tipo\+Vendedor)
-\item 
+\Hypertarget{classVendedor_abc9586a0933dc3719e8b7fcfe9db0563}\label{classVendedor_abc9586a0933dc3719e8b7fcfe9db0563} 
+{\bfseries Vendedor} ()
+\begin{DoxyCompactList}\small\item\em Construtor default/vazio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVendedor_a7dcf93d25da34a6aa4367b1250e02582}{Vendedor}} (char tipo\+Vendedor)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado que recebe o tipo do vendedor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classVendedor_a49d65379895f9a2518b197e2d0c0d49c}{get\+Tipo\+Vendedor}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o membro da classe tipo\+Vendedor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVendedor_ad591c4271e9419503e636c89ca9b32d4}{set\+Tipo\+Vendedor}} (std\+::string tipo\+Vendedor)
+\begin{DoxyCompactList}\small\item\em Função que altera o tipo do vendedor. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classVendedor_a474ea9d58a882cfff30082b9359de5b9}{calcular\+Salario}} (int dias\+Faltas)
-\item 
+\begin{DoxyCompactList}\small\item\em Função que calcula o salário do funcionário baseado na quantidade de dias faltados no mês. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classVendedor_a525d76e72158608c9f2bd45478f1adb3}{calcular\+Recisao}} (\mbox{\hyperlink{structData}{Data}} desligamento)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função que calcula a rescisão do funcionário. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPessoa}{Pessoa}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -72,6 +72,24 @@ void {\bfseries set\+Dias\+Faltas} (int dias\+Faltas)
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVendedor_a7dcf93d25da34a6aa4367b1250e02582}\label{classVendedor_a7dcf93d25da34a6aa4367b1250e02582} 
+\index{Vendedor@{Vendedor}!Vendedor@{Vendedor}}
+\index{Vendedor@{Vendedor}!Vendedor@{Vendedor}}
+\doxysubsubsection{\texorpdfstring{Vendedor()}{Vendedor()}}
+{\footnotesize\ttfamily Vendedor\+::\+Vendedor (\begin{DoxyParamCaption}\item[{char}]{tipo\+Vendedor }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado que recebe o tipo do vendedor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tipo\+Vendedor} & é a variável que inicializará o membro tipo\+Vendedor da classe. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classVendedor_a525d76e72158608c9f2bd45478f1adb3}\label{classVendedor_a525d76e72158608c9f2bd45478f1adb3} 
 \index{Vendedor@{Vendedor}!calcularRecisao@{calcularRecisao}}
@@ -79,6 +97,15 @@ void {\bfseries set\+Dias\+Faltas} (int dias\+Faltas)
 \doxysubsubsection{\texorpdfstring{calcularRecisao()}{calcularRecisao()}}
 {\footnotesize\ttfamily float Vendedor\+::calcular\+Recisao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}}}]{desligamento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Função que calcula a rescisão do funcionário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desligamento} & é a data do desligamento do funcionário. \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classFuncionario}{Funcionario}}.
@@ -91,11 +118,48 @@ Implements \mbox{\hyperlink{classFuncionario}{Funcionario}}.
 
 
 
+Função que calcula o salário do funcionário baseado na quantidade de dias faltados no mês. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dias\+Faltas} & é a quantidade de dias que o funcionário faltou no mês. \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{classFuncionario}{Funcionario}}.
 
+\Hypertarget{classVendedor_a49d65379895f9a2518b197e2d0c0d49c}\label{classVendedor_a49d65379895f9a2518b197e2d0c0d49c} 
+\index{Vendedor@{Vendedor}!getTipoVendedor@{getTipoVendedor}}
+\index{getTipoVendedor@{getTipoVendedor}!Vendedor@{Vendedor}}
+\doxysubsubsection{\texorpdfstring{getTipoVendedor()}{getTipoVendedor()}}
+{\footnotesize\ttfamily string Vendedor\+::get\+Tipo\+Vendedor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o membro da classe tipo\+Vendedor. 
+
+\begin{DoxyReturn}{Returns}
+Tipo do vendedor da classe. 
+\end{DoxyReturn}
+\Hypertarget{classVendedor_ad591c4271e9419503e636c89ca9b32d4}\label{classVendedor_ad591c4271e9419503e636c89ca9b32d4} 
+\index{Vendedor@{Vendedor}!setTipoVendedor@{setTipoVendedor}}
+\index{setTipoVendedor@{setTipoVendedor}!Vendedor@{Vendedor}}
+\doxysubsubsection{\texorpdfstring{setTipoVendedor()}{setTipoVendedor()}}
+{\footnotesize\ttfamily void Vendedor\+::set\+Tipo\+Vendedor (\begin{DoxyParamCaption}\item[{std\+::string}]{tipo\+Vendedor }\end{DoxyParamCaption})}
+
+
+
+Função que altera o tipo do vendedor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tipo\+Vendedor} & é o parâmetro que irá alterar o membro tipo\+Vendedor da classe. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-vendedor.\+hpp\item 
+\mbox{\hyperlink{vendedor_8hpp}{vendedor.\+hpp}}\item 
 vendedor.\+cpp\end{DoxyCompactItemize}

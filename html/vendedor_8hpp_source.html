@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projeto Empresa - LP1 - Unid3: vendedor.hpp Source File</title>
+<title>My Project: vendedor.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projeto Empresa - LP1 - Unid3
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -72,31 +72,36 @@ $(function() {
   <div class="headertitle"><div class="title">vendedor.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef VENDEDOR_HPP</span></div>
+<a href="vendedor_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef VENDEDOR_HPP</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define VENDEDOR_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;pessoa.hpp&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;funcionario.hpp&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classVendedor.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classVendedor.html">Vendedor</a> : <span class="keyword">public</span> <a class="code hl_class" href="classPessoa.html">Pessoa</a>, <span class="keyword">public</span> <a class="code hl_class" href="classFuncionario.html">Funcionario</a>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    std::string tipoVendedor; <span class="comment">// A, B, C</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="classVendedor.html">Vendedor</a>();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classVendedor.html">Vendedor</a>(<span class="keywordtype">char</span> tipoVendedor);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    std::string getTipoVendedor();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> setTipoVendedor(std::string tipoVendedor);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">float</span> calcularSalario(<span class="keywordtype">int</span> diasFaltas);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">float</span> calcularRecisao(<a class="code hl_struct" href="structData.html">Data</a> desligamento);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classVendedor.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classVendedor.html">Vendedor</a> : <span class="keyword">public</span> <a class="code hl_class" href="classPessoa.html">Pessoa</a>, <span class="keyword">public</span> <a class="code hl_class" href="classFuncionario.html">Funcionario</a>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    std::string tipoVendedor; <span class="comment">// A, B, C</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_function" href="classVendedor.html#abc9586a0933dc3719e8b7fcfe9db0563">Vendedor</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="classVendedor.html#abc9586a0933dc3719e8b7fcfe9db0563">Vendedor</a>(<span class="keywordtype">char</span> tipoVendedor);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    std::string <a class="code hl_function" href="classVendedor.html#a49d65379895f9a2518b197e2d0c0d49c">getTipoVendedor</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classVendedor.html#ad591c4271e9419503e636c89ca9b32d4">setTipoVendedor</a>(std::string tipoVendedor);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classVendedor.html#a474ea9d58a882cfff30082b9359de5b9">calcularSalario</a>(<span class="keywordtype">int</span> diasFaltas);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classVendedor.html#a525d76e72158608c9f2bd45478f1adb3">calcularRecisao</a>(<a class="code hl_struct" href="structData.html">Data</a> desligamento);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassFuncionario_html"><div class="ttname"><a href="classFuncionario.html">Funcionario</a></div><div class="ttdef"><b>Definition</b> funcionario.hpp:6</div></div>
 <div class="ttc" id="aclassPessoa_html"><div class="ttname"><a href="classPessoa.html">Pessoa</a></div><div class="ttdef"><b>Definition</b> pessoa.hpp:6</div></div>
-<div class="ttc" id="aclassVendedor_html"><div class="ttname"><a href="classVendedor.html">Vendedor</a></div><div class="ttdef"><b>Definition</b> vendedor.hpp:7</div></div>
-<div class="ttc" id="astructData_html"><div class="ttname"><a href="structData.html">Data</a></div><div class="ttdef"><b>Definition</b> util.hpp:5</div></div>
+<div class="ttc" id="aclassVendedor_html"><div class="ttname"><a href="classVendedor.html">Vendedor</a></div><div class="ttdef"><b>Definition</b> vendedor.hpp:11</div></div>
+<div class="ttc" id="aclassVendedor_html_a474ea9d58a882cfff30082b9359de5b9"><div class="ttname"><a href="classVendedor.html#a474ea9d58a882cfff30082b9359de5b9">Vendedor::calcularSalario</a></div><div class="ttdeci">float calcularSalario(int diasFaltas)</div><div class="ttdoc">Função que calcula o salário do funcionário baseado na quantidade de dias faltados no mês.</div><div class="ttdef"><b>Definition</b> vendedor.cpp:19</div></div>
+<div class="ttc" id="aclassVendedor_html_a49d65379895f9a2518b197e2d0c0d49c"><div class="ttname"><a href="classVendedor.html#a49d65379895f9a2518b197e2d0c0d49c">Vendedor::getTipoVendedor</a></div><div class="ttdeci">std::string getTipoVendedor()</div><div class="ttdoc">Função que retorna o membro da classe tipoVendedor.</div><div class="ttdef"><b>Definition</b> vendedor.cpp:11</div></div>
+<div class="ttc" id="aclassVendedor_html_a525d76e72158608c9f2bd45478f1adb3"><div class="ttname"><a href="classVendedor.html#a525d76e72158608c9f2bd45478f1adb3">Vendedor::calcularRecisao</a></div><div class="ttdeci">float calcularRecisao(Data desligamento)</div><div class="ttdoc">Função que calcula a rescisão do funcionário.</div><div class="ttdef"><b>Definition</b> vendedor.cpp:36</div></div>
+<div class="ttc" id="aclassVendedor_html_abc9586a0933dc3719e8b7fcfe9db0563"><div class="ttname"><a href="classVendedor.html#abc9586a0933dc3719e8b7fcfe9db0563">Vendedor::Vendedor</a></div><div class="ttdeci">Vendedor()</div><div class="ttdoc">Construtor default/vazio.</div><div class="ttdef"><b>Definition</b> vendedor.cpp:5</div></div>
+<div class="ttc" id="aclassVendedor_html_ad591c4271e9419503e636c89ca9b32d4"><div class="ttname"><a href="classVendedor.html#ad591c4271e9419503e636c89ca9b32d4">Vendedor::setTipoVendedor</a></div><div class="ttdeci">void setTipoVendedor(std::string tipoVendedor)</div><div class="ttdoc">Função que altera o tipo do vendedor.</div><div class="ttdef"><b>Definition</b> vendedor.cpp:15</div></div>
+<div class="ttc" id="astructData_html"><div class="ttname"><a href="structData.html">Data</a></div><div class="ttdef"><b>Definition</b> util.hpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
