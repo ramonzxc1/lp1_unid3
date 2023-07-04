@@ -2,8 +2,8 @@ var indexSectionsWithContent =
 {
   0: "acdefgmpsuv",
   1: "adefgpv",
-  2: "emuv",
-  3: "cgmsv"
+  2: "empuv",
+  3: "cgmpsv"
 };
 
 var indexSectionNames =

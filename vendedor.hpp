@@ -25,7 +25,6 @@ public:
     Vendedor(char tipoVendedor);
     /**
      * @brief Função que retorna o membro da classe tipoVendedor.
-     * @return Tipo do vendedor da classe.
     */
     std::string getTipoVendedor();
     /**
