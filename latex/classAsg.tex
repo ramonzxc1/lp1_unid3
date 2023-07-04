@@ -19,9 +19,9 @@ float {\bfseries get\+Adcional\+Insabubridade} ()
 void {\bfseries set\+Adcional\+Insabubridade} (float)
 \item 
 float \mbox{\hyperlink{classAsg_a24163deceebb0361b77a713b905d2349}{calcular\+Salario}} (int dias\+Faltas)
-\item 
+\begin{DoxyCompactList}\small\item\em Função virtual que calcula o salário da classe \doxylink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classAsg_a0ae5473de95f2d39ae5278537574a641}{calcular\+Recisao}} (\mbox{\hyperlink{structData}{Data}} desligamento)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função virtual que calcula a rescisão da classe \doxylink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPessoa}{Pessoa}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -56,22 +56,22 @@ void \mbox{\hyperlink{classPessoa_a5349c468a5bbcf623dd6cf818ccfaf1c}{set\+Qtd\+F
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFuncionario}{Funcionario}}}
 \begin{DoxyCompactItemize}
 \item 
-float {\bfseries get\+Salario} ()
-\item 
-std\+::string {\bfseries get\+Matricula} ()
-\item 
-\mbox{\hyperlink{structData}{Data}} {\bfseries get\+Dataingresso} ()
-\item 
-void {\bfseries set\+Salario} (float salario)
-\item 
-void {\bfseries set\+Matricula} (std\+::string matricula)
-\item 
-void {\bfseries set\+Dataingresso} (\mbox{\hyperlink{structData}{Data}} ingresso\+Empresa)
-\item 
-int {\bfseries get\+Dias\+Faltas} ()
-\item 
-void {\bfseries set\+Dias\+Faltas} (int dias\+Faltas)
-\end{DoxyCompactItemize}
+float \mbox{\hyperlink{classFuncionario_a98d5aef3daa877847e45e6ff34c7dcf8}{get\+Salario}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o membro da classe \doxylink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFuncionario_aa856c33b14140e29182dd8c3893ad6ec}{get\+Matricula}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o membro da classe \doxylink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{classFuncionario_a177dc35b03e4b5c6153f1851b135ca03}{get\+Dataingresso}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o membro da classe \doxylink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_a22aca68fbdc2f1dec77ba429eabec4d3}{set\+Salario}} (float salario)
+\begin{DoxyCompactList}\small\item\em Função que altera o salário da classe \doxylink{classPessoa}{Pessoa}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}{set\+Matricula}} (std\+::string matricula)
+\begin{DoxyCompactList}\small\item\em Função que altera a matrícula da classe \doxylink{classPessoa}{Pessoa}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_a93767189bf19980f4d2b4bb69c5a3f6e}{set\+Dataingresso}} (\mbox{\hyperlink{structData}{Data}} ingresso\+Empresa)
+\begin{DoxyCompactList}\small\item\em Função que altera a data de ingresso da classe \doxylink{classPessoa}{Pessoa}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFuncionario_ae8ecbd719934a689316fe307baf11eb9}{get\+Dias\+Faltas}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o membro da classe \doxylink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_a4c0675b260f197dcb47d52f8b4542e9f}{set\+Dias\+Faltas}} (int dias\+Faltas)
+\begin{DoxyCompactList}\small\item\em Função que altera a quantidade de dias faltados da classe \doxylink{classPessoa}{Pessoa}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -83,7 +83,19 @@ void {\bfseries set\+Dias\+Faltas} (int dias\+Faltas)
 
 
 
-Implements \mbox{\hyperlink{classFuncionario}{Funcionario}}.
+Função virtual que calcula a rescisão da classe \doxylink{classFuncionario}{Funcionario}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desligamento} & é o parâmetro que será usado no cálculo da rescisão. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor de rescisão da classe \doxylink{classFuncionario}{Funcionario}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFuncionario_a1aa96ac8c4f6c5e9af559d9b94d37b46}{Funcionario}}.
 
 \Hypertarget{classAsg_a24163deceebb0361b77a713b905d2349}\label{classAsg_a24163deceebb0361b77a713b905d2349} 
 \index{Asg@{Asg}!calcularSalario@{calcularSalario}}
@@ -93,7 +105,19 @@ Implements \mbox{\hyperlink{classFuncionario}{Funcionario}}.
 
 
 
-Implements \mbox{\hyperlink{classFuncionario}{Funcionario}}.
+Função virtual que calcula o salário da classe \doxylink{classFuncionario}{Funcionario}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dias\+Faltas} & é o parâmetro que será usado no cálculo do salário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Salário da classe \doxylink{classFuncionario}{Funcionario}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}{Funcionario}}.
 
 
 

@@ -76,7 +76,7 @@ $(function() {
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GERENTE_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="pessoa_8hpp.html">pessoa.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;funcionario.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="funcionario_8hpp.html">funcionario.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classGerente.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classGerente.html">Gerente</a> : <span class="keyword">public</span> <a class="code hl_class" href="classPessoa.html">Pessoa</a>, <span class="keyword">public</span> <a class="code hl_class" href="classFuncionario.html">Funcionario</a>{</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
@@ -88,14 +88,17 @@ $(function() {
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classGerente.html">Gerente</a>(<span class="keywordtype">float</span> participacaoLucros);</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">float</span> getParticipacaoLucros();</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> setParticipacaoLucros(<span class="keywordtype">float</span> participacaoLucros);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">float</span> calcularSalario(<span class="keywordtype">int</span> diasFaltas);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">float</span> calcularRecisao(<a class="code hl_struct" href="structData.html">Data</a> desligamento);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classGerente.html#a6b6c4cde79c813d33b3a7e8dbbab28ee">calcularSalario</a>(<span class="keywordtype">int</span> diasFaltas);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classGerente.html#a64992131f44753a797bc51598e308fce">calcularRecisao</a>(<a class="code hl_struct" href="structData.html">Data</a> desligamento);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassFuncionario_html"><div class="ttname"><a href="classFuncionario.html">Funcionario</a></div><div class="ttdef"><b>Definition</b> funcionario.hpp:6</div></div>
+<div class="ttc" id="aclassFuncionario_html"><div class="ttname"><a href="classFuncionario.html">Funcionario</a></div><div class="ttdef"><b>Definition</b> funcionario.hpp:11</div></div>
 <div class="ttc" id="aclassGerente_html"><div class="ttname"><a href="classGerente.html">Gerente</a></div><div class="ttdef"><b>Definition</b> gerente.hpp:7</div></div>
+<div class="ttc" id="aclassGerente_html_a64992131f44753a797bc51598e308fce"><div class="ttname"><a href="classGerente.html#a64992131f44753a797bc51598e308fce">Gerente::calcularRecisao</a></div><div class="ttdeci">float calcularRecisao(Data desligamento)</div><div class="ttdoc">Função virtual que calcula a rescisão da classe Funcionario.</div><div class="ttdef"><b>Definition</b> gerente.cpp:28</div></div>
+<div class="ttc" id="aclassGerente_html_a6b6c4cde79c813d33b3a7e8dbbab28ee"><div class="ttname"><a href="classGerente.html#a6b6c4cde79c813d33b3a7e8dbbab28ee">Gerente::calcularSalario</a></div><div class="ttdeci">float calcularSalario(int diasFaltas)</div><div class="ttdoc">Função virtual que calcula o salário da classe Funcionario.</div><div class="ttdef"><b>Definition</b> gerente.cpp:21</div></div>
 <div class="ttc" id="aclassPessoa_html"><div class="ttname"><a href="classPessoa.html">Pessoa</a></div><div class="ttdef"><b>Definition</b> pessoa.hpp:10</div></div>
+<div class="ttc" id="afuncionario_8hpp_html"><div class="ttname"><a href="funcionario_8hpp.html">funcionario.hpp</a></div><div class="ttdoc">Biblioteca que contém a classe Funcionario.</div></div>
 <div class="ttc" id="apessoa_8hpp_html"><div class="ttname"><a href="pessoa_8hpp.html">pessoa.hpp</a></div><div class="ttdoc">Biblioteca que contém a classe Pessoa.</div></div>
 <div class="ttc" id="astructData_html"><div class="ttname"><a href="structData.html">Data</a></div><div class="ttdef"><b>Definition</b> util.hpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
